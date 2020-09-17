@@ -5,15 +5,15 @@
 &nbsp;
 <h2>What's our project?</h2>
 
-### ~ We have created a To-do List which allows a list of shared tasks within the class.
-### ~ We use realtime database to sync all the tasks in everybody's account.
-### ~ The task added by anyone in that class will automatically appear in your list so that you get to know what is given🙃.
+#### ~ We have created a To-do List which allows a list of shared tasks within the class.
+#### ~ We use realtime database to sync all the tasks in everybody's account.
+#### ~ The task added by anyone in that class will automatically appear in your list so that you get to know what is given🙃.
 
 &nbsp;
 
 <h2>Salient Features🧩</h2>
 
-### ~ 
+#### ~ 
 
 
 &nbsp;
