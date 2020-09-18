@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb
   width: 100%;
   height: 60px;
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   top: 0px;
 }
 
@@ -70,6 +70,7 @@ body::-webkit-scrollbar-thumb
   border-top-left-radius: 0px;
   cursor: pointer;
 }
+
 
 .wrapper .top_navbar .hamburger div{
   width: 35px;
@@ -93,7 +94,7 @@ body::-webkit-scrollbar-thumb
 
 .wrapper .top_navbar .top_menu .logo{
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 3px;
 }
@@ -101,7 +102,8 @@ body::-webkit-scrollbar-thumb
 .wrapper .top_navbar .top_menu ul{
   display: flex;
 }
-i{
+
+#user{
     padding-top: 9px;
 }
 
@@ -127,13 +129,13 @@ i{
 }
 
 .wrapper .sidebar{
-  position: fixed;
+  position: absolute;
   top: 60px;
   left: 0px;
   background: rgb(192, 180, 180);
   width: 200px;
   /* height: calc(100% - 80px); */
-  height: 100%;
+  height: 1050px;
   border-bottom-left-radius: 0px;
   transition: all 0.3s ease;
 }
@@ -225,7 +227,8 @@ i{
     width: 65%;
     margin: auto;
     display:inline-block;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
     position: absolute;
@@ -333,7 +336,7 @@ i{
     opacity: 1;
     display:block;
     float: center;
-    margin-right: 50px;
+    margin-right: 75px;
     color: #fa163f;
     width: 30px;
     height: 30px;
@@ -365,7 +368,7 @@ i{
     margin-left: 20%;
     margin-top: 20px;
     background-color: #fff;
-    height: 40px;
+    height: 50px;
     color: #f80022;
     cursor: pointer;
     outline: none;
@@ -389,6 +392,7 @@ i{
 .header{
     float: left;
     margin-left: 5%;
+    margin-bottom: 20px;
     background-color: white;
     color: #f80022;
     text-align: center;
@@ -442,7 +446,7 @@ i{
     height: 80px;
     margin: 0 auto;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .task_container:hover{
@@ -450,13 +454,12 @@ i{
     box-sizing: border-box;
 }
 
-
 #task_data{
     display: inline-block;
     float: left;
     width: 200px;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #task_tool{
@@ -534,6 +537,7 @@ i{
 
 #task_title{
     background-color: #fff;
+    margin-top: 15px;
     font-family: monospace;
     font-weight: bold;
     font-size: 15px;
@@ -548,6 +552,7 @@ i{
     font-size: 12px;
     float: left;
     margin: 0;
+    margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
 }
