@@ -17,7 +17,7 @@
     <script src="rockyou.js"> </script>
   </head>
 
-  <body onload="create_unfinished_task()">
+<body onload="create_unfinished_task()">
 
 <div class="wrapper">
   <div class="top_navbar">
@@ -29,14 +29,21 @@
     <div class="top_menu">
       <div class="logo">ENLIST</div>
       <ul>
-        <li><a href="#">
+        <!-- <li><a href="#">
           <i class="fas fa-search"></i></a></li>
         <li><a href="#">
           <i class="fas fa-bell"></i>
-          </a></li>
-        <li><a href="#">
+          </a></li> -->
+        <li><a">
           <i class="fas fa-user"></i>
           </a></li>
+          <div id="login_div" class="main-div">
+            <h3>Firebase Web login Example</h3>
+            <input type="email" placeholder="Email..." id="email_field" />
+            <input type="password" placeholder="Password..." id="password_field" />
+        
+            <button onclick="login()">Login to Account</button>
+          </div>
       </ul>
     </div>
   </div>
