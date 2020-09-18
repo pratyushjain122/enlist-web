@@ -1,10 +1,26 @@
 body{
-    background-color: #34abeb;
+    background-image: linear-gradient(90deg,white,#c2a8ac);
 }
 
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: red;
+}
 
 #content_container{
-    background-color: #5b5656;
+    background-image: linear-gradient(90deg, #d1243b, rgb(175, 47, 47));
     width: 50%;
     margin: auto;
     display:inline-block;
@@ -16,8 +32,8 @@ body{
 
 #finish_task_header{
     margin: auto;
-    background-color: #4d4646;
-    color: white;
+    background-color: white;
+    color: #d1243b;
     width: 90%;
     height: 70px;
     font-size: 60px;
@@ -30,18 +46,19 @@ body{
 #task_input_container{
     background-color: #fff;
     margin: 10px auto;
-    height: 120px;
+    height: 200px;
     width: 90%;
     margin-bottom: 60px;
+    border: 2px solid red;
 }
 
 #input_box{
-    width:60%;
+    width: 80%;
     float: left;
     height: 50px;
     background-color: none;
     border: none;
-    border-bottom: 2px solid #2e7caa;
+    border-bottom: 2px solid #f80022;
     text-align: center;
     font-weight: monospace;
     font-weight: bold;
@@ -51,17 +68,17 @@ body{
 }
 
 #input_box:focus{
-    border-bottom: 4px solid #2e7caa;
+    border-bottom: 4px solid #f80022;
     outline:none;
 }
 
 #input_date{
-    width: 40%;
+    width: 20%;
     float: left;
     height: 50px;
     background-color: none;
     border: none;
-    border-bottom: 2px solid #2e7caa;
+    border-bottom: 2px solid #f80022;
     text-align: center;
     font-family: monospace;
     font-weight: bold;
@@ -71,28 +88,38 @@ body{
 }
 
 #input_date:focus{
-    border-bottom: 4px solid #2e7caa;
+    border-bottom: 4px solid #f80022;
     outline: none;
 }
 
 ::-webkit-datetime-edit-feilds-wrapper{
-    background: white; margin-left: 50px;
+    background: white;
+    opacity: 0; 
+    margin-left: 50px;
 }
 
 ::-webkit-datetime-edit-text{
-    color: red; padding: 0 0.3rem;
+    color: red;
+    opacity: 0; 
+    padding: 0 0.3rem;
 }
 
 ::-webkit-datetime-edit-month-field{
-    color: black; font-family: monospace;
+    color: black;
+    opacity: 0; 
+    font-family: monospace;
 }
 
 ::-webkit-datetime-edit-day-field{
-    color: black; font-family: monospace;
+    color: black; 
+    opacity: 0;
+    font-family: monospace;
 }
 
 ::-webkit-datetime-edit-year-field{
-    color: black; font-family: monospace;
+    opacity: 0;
+    color: black; 
+    font-family: monospace;
 }
 
 ::-webkit-inner-spin-button{
@@ -102,11 +129,30 @@ body{
 ::-webkit-calendar-picker-indicator{
     opacity: 1;
     display:block;
-    float: left;
+    float: center;
     margin-right: 50px;
     color: #fa163f;
-    width: 15.5px;
-    height: 12.5px;
+    width: 30px;
+    height: 30px;
+}
+
+#input_description{
+    width:100%;
+    float: left;
+    height: 70px;
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid #f80022;
+    text-align: center;
+    font-weight: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#input_description:focus{
+    border-bottom: 4px solid #f80022;
+    outline:none;
 }
 
 
@@ -117,19 +163,19 @@ body{
     margin-top: 20px;
     background-color: #fff;
     height: 40px;
-    color: #2e7caa;
+    color: #f80022;
     cursor: pointer;
     outline: none;
     text-align: center;
     font-family: monospace;
     font-size: 17px;
     text-align: center;
-    border: 2px solid #828688;
+    border: 2px solid #f80022;
     border-radius: 5px;
 }
 
 #input_button:hover{
-    background-color: #2e7caa;
+    background-color: #f80022;
     color: white;
 }
 
@@ -140,12 +186,12 @@ body{
 .header{
     float: left;
     margin-left: 5%;
-    background-color: #2e7caa;
-    color: white;
+    background-color: white;
+    color: #f80022;
     text-align: center;
     font-family: monospace;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -165,6 +211,26 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+
+.container::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar-thumb
+{
+    background-color: black;
+}
+
+
 
 
 .task_container{
@@ -212,7 +278,7 @@ body{
 }
 
 #task_done_button:hover{
-    background-color: #2e7caa;
+    background-color: green;
     color: white;
 }
 
@@ -234,7 +300,7 @@ body{
 }
 
 #task_edit_button:hover{
-    background-color: #2e7caa;
+    background-color:grey;
     color: white;
 }
 
