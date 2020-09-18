@@ -1,23 +1,77 @@
 <html>
 
   <head>
-    <title> Finish Task. </title>
+    <title> Enlist </title>
     <link rel="icon" href="to-do-list.png" type="image/png">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="rockyou.css" type="text/css">
-
-    
     <script src="rockyou.js"> </script>
   </head>
 
   <body onload="create_unfinished_task()">
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">ENLIST</div>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-search"></i></a></li>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">CS B</span></a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">CS B1</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">CS B2</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">CS B3</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title">Nature</span>
+          </a></li>
+    </ul>
+  </div>
+
     <div id="content_container">
       <div id="finish_task_header">
-        <p> Finish Task. </p>
+        <p> ALL TASKS </p>
       </div>
 
       <div id="task_input_container">
-        <input id="input_box" type="text" placeholder="Start A Task"/>
+        <input id="input_box" type="text" placeholder="Enter a task"/>
         <input id="input_date" type="date"/>
         <button id="input_button" onclick="add_task();">
           Enter Task <i class="fa fa-arrow-circle-right"></i>
