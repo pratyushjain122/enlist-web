@@ -16,20 +16,40 @@ firebase.analytics();
 function add_task(){
     input_box = document.getElementById("input_box");
     input_date = document.getElementById("input_date");
+    input_description = document.getElementById("input_description");
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
       // our boxes have data and we take database
-      var key = firebase.database().ref().child("To-Do-List").child("B").push().key;
+      var key = firebase.database().ref().child("To-Do-List");
       //var key1 = firebase.database().ref().child("Source");
+      //let key1 =firebase.database().ref().child("To-Do-List").child("xyz");
+      let xyz =prompt("enter class");
+     
+      if (xyz==("B")) {
+          key = key.child("B").push.key;
+          
+      }
+      else if (xyz==("B1")) {
+          key = key.child("B1").push.key;
+          
+      }
+      else if (xyz==("B2")) {
+          key = key.child("B2").push.key;
+        
+      }
+      else if (xyz==("B3")) {
+          key = key.child("B3").push.key;
+      }
 
       var task = {
         title: input_box.value,
+        //description: input_description.value,
         deadline: input_date.value,
         key: key
       };
 
       var updates = {};
-      updates["/To-Do-List/B/" + key] = task;
+      updates["/To-Do-List/" + key] = task;
       firebase.database().ref().update(updates);
       create_unfinished_task();
     }
@@ -40,7 +60,7 @@ function add_task(){
     unfinished_task_container.innerHTML = "";
 
     task_array = [];
-    firebase.database().ref("To-Do-List/B/").once('value', function(snapshot) {
+    firebase.database().ref("To-Do-List/").once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         var childKey = childSnapshot.key;
         var childData = childSnapshot.val();
@@ -50,6 +70,7 @@ function add_task(){
         task_date = task_array[i][0];
         task_key = task_array[i][1];
         task_title = task_array[i][2];
+        //task_description = task_array[i][3];
 
         task_container = document.createElement("div");
         task_container.setAttribute("class", "task_container");
@@ -68,6 +89,8 @@ function add_task(){
         date.setAttribute('id', 'task_date');
         date.setAttribute('contenteditable', false);
         date.innerHTML = task_date;
+
+
 
         // TASK TOOLS
         task_tool = document.createElement('div');
@@ -167,14 +190,14 @@ function add_task(){
     };
 
     var updates = {};
-    updates["/To-Do-List/B/" + key] = task_obj;
+    updates["/To-Do-List/" + key] = task_obj;
     firebase.database().ref().update(updates);
 
   }
 
   function task_delete(task){
     key = task.getAttribute("data-key");
-    task_to_remove = firebase.database().ref("/To-Do-List/B/" + key);
+    task_to_remove = firebase.database().ref("/To-Do-List/" + key);
     task_to_remove.remove();
 
     // remove from html view or whatevesss
@@ -184,7 +207,7 @@ function add_task(){
 
   function task_finished_delete(task){
     key = task.getAttribute("data-key");
-    task_to_remove = firebase.database().ref("/To-Do-List/B/" + key);
+    task_to_remove = firebase.database().ref("/To-Do-List/" + key);
     task_to_remove.remove();
 
     // remove from html view or whatevesss
