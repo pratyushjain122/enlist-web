@@ -2,6 +2,22 @@ body{
     background-image: linear-gradient(90deg,white,#c2a8ac);
 }
 
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: red;
+}
 
 #content_container{
     background-image: linear-gradient(90deg, #d1243b, rgb(175, 47, 47));
@@ -33,6 +49,7 @@ body{
     height: 200px;
     width: 90%;
     margin-bottom: 60px;
+    border: 2px solid red;
 }
 
 #input_box{
@@ -115,8 +132,8 @@ body{
     float: center;
     margin-right: 50px;
     color: #fa163f;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 #input_description{
@@ -130,7 +147,6 @@ body{
     font-weight: monospace;
     font-weight: bold;
     font-size: 15px;
-    border-right: 0.2px solid #4d4646;
     transition: 0.3s;
 }
 
@@ -195,6 +211,26 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+
+.container::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+.container::-webkit-scrollbar-thumb
+{
+	background-color: black;
+}
+
+
 
 
 .task_container{
