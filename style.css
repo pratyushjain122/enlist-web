@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb
     width: 50%;
     margin: auto;
     display:inline-block;
+    padding-top: 20px;
     padding-bottom: 50px;
     position: absolute;
     left: 50%;
