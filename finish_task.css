@@ -30,13 +30,13 @@ body{
 #task_input_container{
     background-color: #fff;
     margin: 10px auto;
-    height: 120px;
+    height: 200px;
     width: 90%;
     margin-bottom: 60px;
 }
 
 #input_box{
-    width:60%;
+    width: 80%;
     float: left;
     height: 50px;
     background-color: none;
@@ -56,7 +56,7 @@ body{
 }
 
 #input_date{
-    width: 40%;
+    width: 20%;
     float: left;
     height: 50px;
     background-color: none;
@@ -76,23 +76,33 @@ body{
 }
 
 ::-webkit-datetime-edit-feilds-wrapper{
-    background: white; margin-left: 50px;
+    background: white;
+    opacity: 0; 
+    margin-left: 50px;
 }
 
 ::-webkit-datetime-edit-text{
-    color: red; padding: 0 0.3rem;
+    color: red;
+    opacity: 0; 
+    padding: 0 0.3rem;
 }
 
 ::-webkit-datetime-edit-month-field{
-    color: black; font-family: monospace;
+    color: black;
+    opacity: 0; 
+    font-family: monospace;
 }
 
 ::-webkit-datetime-edit-day-field{
-    color: black; font-family: monospace;
+    color: black; 
+    opacity: 0;
+    font-family: monospace;
 }
 
 ::-webkit-datetime-edit-year-field{
-    color: black; font-family: monospace;
+    opacity: 0;
+    color: black; 
+    font-family: monospace;
 }
 
 ::-webkit-inner-spin-button{
@@ -102,11 +112,31 @@ body{
 ::-webkit-calendar-picker-indicator{
     opacity: 1;
     display:block;
-    float: left;
+    float: center;
     margin-right: 50px;
     color: #fa163f;
-    width: 15.5px;
-    height: 12.5px;
+    width: 20px;
+    height: 20px;
+}
+
+#input_description{
+    width:100%;
+    float: left;
+    height: 70px;
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid #f80022;
+    text-align: center;
+    font-weight: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    border-right: 0.2px solid #4d4646;
+    transition: 0.3s;
+}
+
+#input_description:focus{
+    border-bottom: 4px solid #f80022;
+    outline:none;
 }
 
 
@@ -145,7 +175,7 @@ body{
     text-align: center;
     font-family: monospace;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -212,7 +242,7 @@ body{
 }
 
 #task_done_button:hover{
-    background-color: #2e7caa;
+    background-color: green;
     color: white;
 }
 
@@ -234,7 +264,7 @@ body{
 }
 
 #task_edit_button:hover{
-    background-color: #2e7caa;
+    background-color:grey;
     color: white;
 }
 
