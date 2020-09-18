@@ -1,0 +1,284 @@
+body{
+    background-image: linear-gradient(90deg,white,#c2a8ac);
+}
+
+
+#content_container{
+    background-image: linear-gradient(90deg, #d1243b, rgb(175, 47, 47));
+    width: 50%;
+    margin: auto;
+    display:inline-block;
+    padding-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+
+#finish_task_header{
+    margin: auto;
+    background-color: white;
+    color: #d1243b;
+    width: 90%;
+    height: 70px;
+    font-size: 60px;
+    font-family: monospace;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#task_input_container{
+    background-color: #fff;
+    margin: 10px auto;
+    height: 120px;
+    width: 90%;
+    margin-bottom: 60px;
+}
+
+#input_box{
+    width:60%;
+    float: left;
+    height: 50px;
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid #f80022;
+    text-align: center;
+    font-weight: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    border-right: 0.2px solid #4d4646;
+    transition: 0.3s;
+}
+
+#input_box:focus{
+    border-bottom: 4px solid #f80022;
+    outline:none;
+}
+
+#input_date{
+    width: 40%;
+    float: left;
+    height: 50px;
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid #f80022;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0;
+    transition: 0.3s;
+}
+
+#input_date:focus{
+    border-bottom: 4px solid #f80022;
+    outline: none;
+}
+
+::-webkit-datetime-edit-feilds-wrapper{
+    background: white; margin-left: 50px;
+}
+
+::-webkit-datetime-edit-text{
+    color: red; padding: 0 0.3rem;
+}
+
+::-webkit-datetime-edit-month-field{
+    color: black; font-family: monospace;
+}
+
+::-webkit-datetime-edit-day-field{
+    color: black; font-family: monospace;
+}
+
+::-webkit-datetime-edit-year-field{
+    color: black; font-family: monospace;
+}
+
+::-webkit-inner-spin-button{
+    display: none;
+}
+
+::-webkit-calendar-picker-indicator{
+    opacity: 1;
+    display:block;
+    float: left;
+    margin-right: 50px;
+    color: #fa163f;
+    width: 15.5px;
+    height: 12.5px;
+}
+
+
+#input_button{
+    width: 60%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+    background-color: #fff;
+    height: 40px;
+    color: #f80022;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: center;
+    border: 2px solid #f80022;
+    border-radius: 5px;
+}
+
+#input_button:hover{
+    background-color: #f80022;
+    color: white;
+}
+
+#input_button:active{
+    transform: translateY(4px);
+}
+
+.header{
+    float: left;
+    margin-left: 5%;
+    background-color: white;
+    color: #f80022;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 5px #4d4646;
+}
+
+
+
+.container{
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    background-color: #f5eaea;
+    width: 90%;
+    height: 390px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.task_container{
+    background-color: #fff;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.task_container:hover{
+    border: 2px solid #2e7caa;
+    box-sizing: border-box;
+}
+
+
+#task_data{
+    display: inline-block;
+    float: left;
+    width: 200px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+#task_tool{
+    display: inline-block;
+    float: right;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task_done_button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#task_done_button:hover{
+    background-color: #2e7caa;
+    color: white;
+}
+
+#task_done_button:active{
+    transform: translateY(4px);
+}
+
+
+#task_edit_button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#task_edit_button:hover{
+    background-color: #2e7caa;
+    color: white;
+}
+
+#task_edit_button:active{
+    transform: translateY(4px);
+}
+
+#task_delete_button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#task_delete_button:hover{
+    background-color: #fa163f;
+    color: white;
+}
+
+#task_delete_button:active{
+    transform: translateY(4px);
+}
+
+#task_title{
+    background-color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    float: left;
+    width: 100%;
+}
+
+#task_date{
+    background-color: #fff;
+    font-family: monospace;
+    color: grey;
+    font-size: 12px;
+    float: left;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 100%;
+}

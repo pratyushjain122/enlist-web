@@ -1,0 +1,43 @@
+<html>
+
+  <head>
+    <title> Enlist </title>
+    <link rel="icon" href="to-do-list.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="finish_task.css" type="text/css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="finish_task.js"> </script>
+  </head>
+
+  <body onload="create_unfinished_task()">
+    <div id="content_container">
+      <div id="finish_task_header">
+        <p> ENLIST </p>
+      </div>
+
+      <div id="task_input_container">
+        <input id="input_box" type="text" placeholder="Start A Task"/>
+        <input id="input_date" type="date"/>
+        <button id="input_button" onclick="add_task();">
+          Enter Task <i class="fa fa-arrow-circle-right"></i>
+        </button>
+      </div>
+
+      <!-- Task To Do -->
+      <p class="header"> Tasks </p>
+      <div class="container">
+
+
+      </div>
+
+
+      
+
+
+
+
+    </div>
+  </body>
+</html>
