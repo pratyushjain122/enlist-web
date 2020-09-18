@@ -19,7 +19,7 @@
 &nbsp;
 <h2>WebApp & App Integration 😎</h2>
 
-#### ~ 
+#### ~ The list can be easily viewed both on WebApp and Android App 
 
 &nbsp;
 <h2>Contributions 👨‍💻</h2>
