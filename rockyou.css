@@ -101,9 +101,12 @@ body::-webkit-scrollbar-thumb
 .wrapper .top_navbar .top_menu ul{
   display: flex;
 }
+i{
+    padding-top: 9px;
+}
 
 .wrapper .top_navbar .top_menu ul li a{
-  display: block;
+  display: block; 
   margin: 0 10px;
   width: 35px;
   height: 35px;
