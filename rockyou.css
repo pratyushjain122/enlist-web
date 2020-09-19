@@ -133,7 +133,7 @@ body::-webkit-scrollbar-thumb
   top: 60px;
   left: 0px;
   background: rgb(192, 180, 180);
-  width: 200px;
+  width: 120px;
   /* height: calc(100% - 80px); */
   height: 1050px;
   border-bottom-left-radius: 0px;
@@ -242,7 +242,7 @@ body::-webkit-scrollbar-thumb
     color: #d1243b;
     width: 90%;
     height: 70px;
-    font-size: 60px;
+    font-size: 50px;
     font-family: monospace;
     text-align: center;
     border-top-right-radius: 10px;
@@ -290,7 +290,7 @@ body::-webkit-scrollbar-thumb
     font-weight: bold;
     font-size: 15px;
     padding: 0;
-    transition: 0.3s;
+    transition: 0.3s;x
 }
 
 #input_date:focus{
