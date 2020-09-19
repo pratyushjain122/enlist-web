@@ -34,15 +34,6 @@ let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 //   })
 
 
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     // User logged in already or has just logged in.
-//     console.log(user.uid);
-//   } else {
-//     // User not logged in or has just logged out.
-//   }
-// });
-
 
 
 
@@ -62,25 +53,22 @@ function add_task(){
       
       var key = firebase.database().ref();
 
-      let sourceKey = key.child("Source/").push().userUID;
-      
-
       if (xyz === "B") {
-          key = key.child("To-Do-List/B/").push().uniqkey;
+          key = key.child("To-Do-List/B/").push().key;
         
       }
       else if(xyz === "B1"){
-          key = key.child("To-Do-List/B1/").push().uniqkey;
+          key = key.child("To-Do-List/B1/").push().key;
 
       }
       else if(xyz === "B2"){
         
-          key = key.child("To-Do-List/B2/").push().uniqkey;
+          key = key.child("To-Do-List/B2/").push().key;
   
       }
       else if(xyz === "B3"){
          
-          key = key.child("To-Do-List/B3/").push().uniqkey;
+          key = key.child("To-Do-List/B3/").push().key;
          
       }
 
@@ -93,6 +81,11 @@ function add_task(){
       var updates = {};
       updates["/To-Do-List/" + xyz + "/" +"Task" + uniqkey] = task;
       firebase.database().ref().update(updates);
+
+      var updates1 = {};
+      updates1["/Source/" + key] = key; //replace key with userUID
+      firebase.database().ref().update(updates1);
+
       create_unfinished_task();
     }
   }

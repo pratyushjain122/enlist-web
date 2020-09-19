@@ -50,3 +50,12 @@ var uiConfig = {
 
   // The start method will wait until the DOM is loaded.
     ui.start('#firebaseui-auth-container', uiConfig);
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        console.log(user.uid);
+      } else {
+        // No user is signed in.
+      }
+    });
