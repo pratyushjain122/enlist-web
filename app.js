@@ -18,53 +18,80 @@
 // const b2 = document.getElementById("b2");
 // const b3 = document.getElementById("b3");
 
-
-let xyz=prompt("enter the class");
-
 // b.addEventListener("click", funcB);
 // b1.addEventListener("click", funcB1);
 // b2.addEventListener("click", funcB2);
 // b3.addEventListener("click", funcB3);
 
+let xyz=prompt("enter the class");
+let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
+
+
+
+// firebase.auth().onAuthStateChanged(function(user) {
+//   window.user = user; 
+//   })
+
+
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     // User logged in already or has just logged in.
+//     console.log(user.uid);
+//   } else {
+//     // User not logged in or has just logged out.
+//   }
+// });
+
+
+
+
+
+
+// let firebaseUser = firebase.auth().currentUser;
+// let userUID = user.uid;
+// console.log(userUID);
 
 function add_task(){
     input_box = document.getElementById("input_box");
     input_date = document.getElementById("input_date");
+    
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
       // our boxes have data and we take database
+      
       var key = firebase.database().ref();
 
+      let sourceKey = key.child("Source/").push().userUID;
       
 
       if (xyz === "B") {
-          key = key.child("To-Do-List/B/").push().key;
+          key = key.child("To-Do-List/B/").push().uniqkey;
         
       }
       else if(xyz === "B1"){
-          key = key.child("To-Do-List/B1/").push().key;
+          key = key.child("To-Do-List/B1/").push().uniqkey;
 
       }
       else if(xyz === "B2"){
         
-          key = key.child("To-Do-List/B2/").push().key;
+          key = key.child("To-Do-List/B2/").push().uniqkey;
   
       }
       else if(xyz === "B3"){
          
-          key = key.child("To-Do-List/B3/").push().key;
+          key = key.child("To-Do-List/B3/").push().uniqkey;
          
       }
 
       var task = {
         title: input_box.value,
         date: input_date.value,
-        key: key
+        key: uniqkey
       };
 
       var updates = {};
-      updates["/To-Do-List/" + xyz + "/" + key] = task;
+      updates["/To-Do-List/" + xyz + "/" +"Task" + uniqkey] = task;
       firebase.database().ref().update(updates);
       create_unfinished_task();
     }
@@ -77,7 +104,7 @@ function add_task(){
     task_array = [];
     firebase.database().ref("To-Do-List/" + xyz).once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
-        var childKey = childSnapshot.key;
+        var childKey = childSnapshot.uniqkey;
         var childData = childSnapshot.val();
         task_array.push(Object.values(childData));
       });
@@ -159,7 +186,7 @@ function add_task(){
     };
 
     var updates = {};
-    updates["/To-Do-List/" + xyz + "/" + key] = task_obj;
+    updates["/To-Do-List/" + xyz + "/" +"Task"+ uniqkey] = task_obj;
     firebase.database().ref().update(updates);
 
     // delete our task from unfinished
@@ -202,14 +229,14 @@ function add_task(){
     };
 
     var updates = {};
-    updates["/To-Do-List/"  + xyz + "/" + key] = task_obj;
+    updates["/To-Do-List/"  + xyz + "/" +"Task"+ uniqkey] = task_obj;
     firebase.database().ref().update(updates);
 
   }
 
   function task_delete(task){
     key = task.getAttribute("data-key");
-    task_to_remove = firebase.database().ref("To-Do-List/" + xyz + "/" + key);
+    task_to_remove = firebase.database().ref("To-Do-List/" + xyz + "/" +"Task"  + uniqkey);
     task_to_remove.remove();
 
     // remove from html view or whatevesss
@@ -217,12 +244,4 @@ function add_task(){
 
   }
 
-  function task_finished_delete(task){
-    key = task.getAttribute("data-key");
-    task_to_remove = firebase.database().ref("To-Do-List/" + xyz + "/" + key);
-    task_to_remove.remove();
 
-    // remove from html view or whatevesss
-    task.remove();
-
-  }

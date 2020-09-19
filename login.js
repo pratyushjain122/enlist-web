@@ -2,6 +2,20 @@
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 
+// if(Source.main_PRN >= 19070122073L && Source.main_PRN <= 19070122095L){
+//   b2.setEnabled(false);
+//   b3.setEnabled(false);
+// }
+// else if(Source.main_PRN >= 19070122096L && Source.main_PRN <= 19070122119L){
+//   b1.setEnabled(false);
+//   b3.setEnabled(false);
+// }
+// else if(Source.main_PRN >= 19070122120L && Source.main_PRN <= 19070122145L){
+//   b1.setEnabled(false);
+//   b2.setEnabled(false);
+// }
+
+
 var uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
