@@ -1,77 +1,32 @@
-document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
-  return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-  return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-  return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-  return false;
-  }
-  }
-  
-// firebase.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     // User is signed in.
-
-//     document.getElementById("user_div").style.display = "block";
-//     document.getElementById("login_div").style.display = "none";
-
-//     var user = firebase.auth().currentUser;
-
-//     if(user != null){
-
-//       var email_id = user.email;
-//       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
-//     }
-
-//   } else {
-//     // No user is signed in.
-
-//     document.getElementById("user_div").style.display = "none";
-//     document.getElementById("login_div").style.display = "block";
-
+// document.onkeydown = function(e) {
+//   if(event.keyCode == 123) {
+//   return false;
 //   }
-// });
-
-// function login(){
-
-//   var userEmail = document.getElementById("email_field").value;
-//   var userPass = document.getElementById("password_field").value;
-
-//   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-//     // Handle Errors here.
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-
-//     window.alert("Error : " + errorMessage);
-
-//     // ...
-//   });
-
-// }
-
-// function logout(){
-//   firebase.auth().signOut();
-// }
-
-
-
-
-
-
-
-
-
-
-
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+//   return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+//   return false;
+//   }
+//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+//   return false;
+//   }
+//   }
+  
+// const b = document.querySelector("#b");
+// const b1 = document.getElementById("b1");
+// const b2 = document.getElementById("b2");
+// const b3 = document.getElementById("b3");
 
 
 let xyz=prompt("enter the class");
+
+// b.addEventListener("click", funcB);
+// b1.addEventListener("click", funcB1);
+// b2.addEventListener("click", funcB2);
+// b3.addEventListener("click", funcB3);
+
+
 
 function add_task(){
     input_box = document.getElementById("input_box");
@@ -84,19 +39,23 @@ function add_task(){
       
 
       if (xyz === "B") {
-        key = key.child("To-Do-List/B/").push().key;
+          key = key.child("To-Do-List/B/").push().key;
         
       }
       else if(xyz === "B1"){
-        key = key.child("To-Do-List/B1/").push().key;
+          key = key.child("To-Do-List/B1/").push().key;
+
       }
       else if(xyz === "B2"){
-        key = key.child("To-Do-List/B2/").push().key;
+        
+          key = key.child("To-Do-List/B2/").push().key;
+  
       }
       else if(xyz === "B3"){
-        key = key.child("To-Do-List/B3/").push().key;
+         
+          key = key.child("To-Do-List/B3/").push().key;
+         
       }
-
 
       var task = {
         title: input_box.value,

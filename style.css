@@ -170,14 +170,12 @@ body::-webkit-scrollbar-thumb
   display: inline-block;
 }
 
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
+.wrapper .sidebar ul li a:hover{
   background: #971f2f;
   color: #fff;
 }
 
-.wrapper .sidebar ul li a:hover:before,
-.wrapper .sidebar ul li a.active:before{
+.wrapper .sidebar ul li a:hover:before{
   display: block;
 }
 
