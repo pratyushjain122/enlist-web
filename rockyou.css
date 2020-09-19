@@ -290,7 +290,7 @@ body::-webkit-scrollbar-thumb
     font-weight: bold;
     font-size: 15px;
     padding: 0;
-    transition: 0.3s;x
+    transition: 0.3s;
 }
 
 #input_date:focus{

@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-// document.onkeydown = function(e) {
-//   if(event.keyCode == 123) {
-//   return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-//   return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-//   return false;
-//   }
-//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-//   return false;
-//   }
-//   }
-=======
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+  return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+  return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+  return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+  return false;
+  }
+  }
+  
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -69,7 +68,6 @@ function logout(){
 
 
 
->>>>>>> 8174cd6f199b892d7e1bd797581579751479beda
 
 
 
