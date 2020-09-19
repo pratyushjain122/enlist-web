@@ -55,6 +55,7 @@ var uiConfig = {
       if (user) {
         // User is signed in.
         console.log(user.uid);
+        firebase.auth().signOut();
       } else {
         // No user is signed in.
       }
