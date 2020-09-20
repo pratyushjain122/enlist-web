@@ -1,47 +1,6 @@
-// document.onkeydown = function(e) {
-//   if(event.keyCode == 123) {
-//   return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-//   return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-//   return false;
-//   }
-//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-//   return false;
-//   }
-//   }
-  
-// const b = document.querySelector("#b");
-// const b1 = document.getElementById("b1");
-// const b2 = document.getElementById("b2");
-// const b3 = document.getElementById("b3");
-
-// b.addEventListener("click", funcB);
-// b1.addEventListener("click", funcB1);
-// b2.addEventListener("click", funcB2);
-// b3.addEventListener("click", funcB3);
 
 let xyz=prompt("enter the class");
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
-
-
-
-
-// firebase.auth().onAuthStateChanged(function(user) {
-//   window.user = user; 
-//   })
-
-
-
-
-
-
-
-// let firebaseUser = firebase.auth().currentUser;
-// let userUID = user.uid;
-// console.log(userUID);
 
 function add_task(){
     input_box = document.getElementById("input_box");
