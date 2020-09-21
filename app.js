@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 //import {demo} from './login'; 
 
 
@@ -20,8 +19,6 @@ let demo;
 
 
 // console.log(demo);
-=======
->>>>>>> 9ebc6d294d217780fb83900d2434c2fb9b427e9c
 let xyz=prompt("enter the class");
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
