@@ -169,17 +169,7 @@ function add_task(){
     //finished_task_container.append(task);
 
     var key = task.getAttribute("data-key");
-    // var task_obj = {
-    //   title: task.childNodes[0].childNodes[0].innerHTML,
-    //   date: task.childNodes[0].childNodes[1].innerHTML,
-    //   description:task.childNodes[0].childNodes[2].innerHTML,
-    //   key: key
-      
-    // };
-
-    // var updates = {};
-    // updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task"+ uniqkey] = task_obj;
-    // firebase.database().ref().update(updates);
+    
 
     // delete our task from unfinished
     task_delete(task);
