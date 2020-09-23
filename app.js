@@ -31,6 +31,7 @@ let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 function add_task(){
     input_box = document.getElementById("input_box");
     input_date = document.getElementById("input_date");
+    input_description = document.getElementById("input_description");
     
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
@@ -59,8 +60,9 @@ function add_task(){
 
       var task = {
         title: input_box.value,
-        date: input_date.value,
-        key: uniqkey
+        deadline: input_date.value,
+        key: uniqkey,
+        description: input_description.value
       };
 
       var updates1 = {};
@@ -91,8 +93,9 @@ function add_task(){
       });
       for(var i, i = 0; i < task_array.length; i++){
         task_date = task_array[i][0];
-        task_key = task_array[i][1];
-        task_title = task_array[i][2];
+        task_title = task_array[i][3];
+        task_key = task_array[i][2];
+        task_description = task_array[i][1];
 
         task_container = document.createElement("div");
         task_container.setAttribute("class", "task_container");
@@ -107,10 +110,15 @@ function add_task(){
         title.setAttribute('contenteditable', false);
         title.innerHTML = task_title;
 
-        date = document.createElement('p');
-        date.setAttribute('id', 'task_date');
-        date.setAttribute('contenteditable', false);
-        date.innerHTML = task_date;
+        deadline = document.createElement('p');
+        deadline.setAttribute('id', 'task_date');
+        deadline.setAttribute('contenteditable', false);
+        deadline.innerHTML = task_date;
+
+        description = document.createElement('p');
+        description.setAttribute('id', 'task_description');
+        description.setAttribute('contenteditable', false);
+        description.innerHTML = task_description;
 
         // TASK TOOLS
         task_tool = document.createElement('div');
@@ -138,7 +146,8 @@ function add_task(){
         unfinished_task_container.append(task_container);
         task_container.append(task_data);
         task_data.append(title);
-        task_data.append(date);
+        task_data.append(deadline);
+        task_data.append(description);
 
         task_container.append(task_tool);
         task_tool.append(task_done_button);
@@ -163,7 +172,8 @@ function add_task(){
     var task_obj = {
       title: task.childNodes[0].childNodes[0].innerHTML,
       date: task.childNodes[0].childNodes[1].innerHTML,
-      key: key
+      key: key,
+      description:task.childNodes[0].childNodes[2].innerHTML
     };
 
     var updates = {};
@@ -184,9 +194,14 @@ function add_task(){
     title.setAttribute("id", "title_editing");
     title.focus();
 
-    date = task.childNodes[0].childNodes[1];
-    date.setAttribute("contenteditable", true);
-    date.setAttribute("id", "date_editing");
+    deadline = task.childNodes[0].childNodes[1];
+    deadline.setAttribute("contenteditable", true);
+    deadline.setAttribute("id", "date_editing");
+
+    description = task.childNodes[0].childNodes[2];
+    description.setAttribute("contenteditable", true);
+    description.setAttribute("id", "description_editing");
+    description.focus();
 
   }
   function finish_edit(task, edit_button){
@@ -197,16 +212,21 @@ function add_task(){
     title.setAttribute("contenteditable", false);
     title.setAttribute("id", "task_title");
 
-    date = task.childNodes[0].childNodes[1];
-    date.setAttribute("contenteditable", false);
-    date.setAttribute("id", "task_date");
+    deadline = task.childNodes[0].childNodes[1];
+    deadline.setAttribute("contenteditable", false);
+    deadline.setAttribute("id", "task_date");
+
+    description = task.childNodes[0].childNodes[2];
+    description.setAttribute("contenteditable", false);
+    description.setAttribute("id", "task_description");
 
     // change in firebase to
     var key = task.getAttribute("data-key");
     var task_obj = {
       title: task.childNodes[0].childNodes[0].innerHTML,
-      date: task.childNodes[0].childNodes[1].innerHTML,
-      key: key
+      deadline: task.childNodes[0].childNodes[1].innerHTML,
+      key: key,
+      description: task.childNodes[0].childNodes[2].innerHTML
     };
 
     var updates = {};
