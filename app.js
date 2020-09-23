@@ -8,14 +8,20 @@ let demo;
       if (user) {
         // User is signed in.
         console.log(user.uid);
+        console.log("lol");
         demo = user.uid;
-        firebase.auth().signOut();
+       
       } else {
         // No user is signed in.
       }
     });
+console.log("lol1");
 
-    
+ function signOut(){
+  firebase.auth().signOut();
+  console.log("lolllllllllllllllllllllll");
+}
+
 
 
 // console.log(demo);
@@ -63,7 +69,7 @@ function add_task(){
 
       var updates = {};
       updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
-      updates[xyz + "/" +"Task" + uniqkey] = task;
+      // updates[xyz + "/" +"Task" + uniqkey] = task;
       firebase.database().ref().update(updates);
 
       
