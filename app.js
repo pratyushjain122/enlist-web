@@ -169,16 +169,17 @@ function add_task(){
     //finished_task_container.append(task);
 
     var key = task.getAttribute("data-key");
-    var task_obj = {
-      title: task.childNodes[0].childNodes[0].innerHTML,
-      date: task.childNodes[0].childNodes[1].innerHTML,
-      key: key,
-      description:task.childNodes[0].childNodes[2].innerHTML
-    };
+    // var task_obj = {
+    //   title: task.childNodes[0].childNodes[0].innerHTML,
+    //   date: task.childNodes[0].childNodes[1].innerHTML,
+    //   description:task.childNodes[0].childNodes[2].innerHTML,
+    //   key: key
+      
+    // };
 
-    var updates = {};
-    updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task"+ uniqkey] = task_obj;
-    firebase.database().ref().update(updates);
+    // var updates = {};
+    // updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task"+ uniqkey] = task_obj;
+    // firebase.database().ref().update(updates);
 
     // delete our task from unfinished
     task_delete(task);
@@ -237,8 +238,9 @@ function add_task(){
 
   function task_delete(task){
     key = task.getAttribute("data-key");
-    task_to_remove = firebase.database().ref("To-Do-List/" + demo +"/" + xyz + "/" +"Task"  + uniqkey);
+    task_to_remove = firebase.database().ref("To-Do-List/" + demo +"/" + xyz + "/" +"Task"  + key);
     task_to_remove.remove();
+    console.log("delete hogya 1");
 
     // remove from html view or whatevesss
     task.remove();
