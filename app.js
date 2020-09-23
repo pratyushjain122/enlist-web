@@ -63,6 +63,7 @@ function add_task(){
 
       var updates = {};
       updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
+      updates[xyz + "/" +"Task" + uniqkey] = task;
       firebase.database().ref().update(updates);
 
       
