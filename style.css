@@ -217,13 +217,6 @@ body::-webkit-scrollbar-thumb
 }
 
 
-#logo{
-    width: 75px;
-    margin: auto;
-    padding: 0;
-}
-
-
 #content_container{
     /* background-image: linear-gradient(90deg, #d1243b, rgb(175, 47, 47)); */
     background-color: rgb(61, 58, 58);
@@ -255,7 +248,7 @@ body::-webkit-scrollbar-thumb
 #task_input_container{
     background-color: #fff;
     margin: 10px auto;
-    height: 200px;
+    height: 220px;
     width: 90%;
     margin-bottom: 60px;
     border: 2px solid red;
