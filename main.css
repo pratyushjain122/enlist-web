@@ -1,4 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+
 body{
     display: grid;
     place-items: center;
+}
+
+#gif{
+    margin-top: 30px;
+    margin-bottom: 75px;
+}
+
+
+#prn{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    width: 350px;
+    height: 50px;
+    border: 2px solid #FF8370;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+#prn:hover{
+    border: 4px solid #FF8370;
+    outline:none;
+}
+
+
+#signin{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    font-size: small;
+    color: rgb(107, 103, 103);
+    text-align: center;
+    border: 2px solid #FF8370;
+    border-radius: 5px;
+}
+
+
+#signin:hover{
+    border: 4px solid #FF8370;
+    outline:none;
 }
