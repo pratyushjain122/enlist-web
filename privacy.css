@@ -86,11 +86,12 @@ i{
 }
 
 li{
-    list-style: "✔ ";
     line-height: 1.75rem;
 }
 
-
+#arrow{
+    border: none;
+}
 
 .disclaimer{
     border: 3px solid #FF8370;
