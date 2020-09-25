@@ -3,7 +3,7 @@
 
 &nbsp;
 
-<h2> ~ This is the webapp section of the ENLIST to-do list.</h2>
+<h2> ~ this is the webapp section of the ENLIST to-do list.</h2>
 &nbsp;
 
 <h3> ➡ If you want to go through the code of the webapp then checkout the files of this repo.</h3>
