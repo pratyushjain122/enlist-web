@@ -52,7 +52,7 @@ h1{
 
 h3{
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #cover{
@@ -75,4 +75,9 @@ h3{
 
 p{
     line-height: 1.75rem;
+}
+
+#decoration{
+    font-weight: 600;
+    text
 }
