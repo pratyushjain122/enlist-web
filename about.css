@@ -75,6 +75,7 @@ h3{
 
 p{
     line-height: 1.75rem;
+    margin-bottom: 1.3em;
 }
 
 #decoration{
@@ -85,6 +86,54 @@ p{
     width: 60%;
     margin: 60px auto;
     text-align: center;
-    /* border-radius: 10px;
-    border: 2px solid #FF8370; */
+}
+
+
+article {
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+#name{
+    margin-bottom: 1.3em;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.profile{
+    border-radius: 100%;
+    border: 1px solid #FF8370;
+    margin: auto;
+    margin-bottom: 20px;
+    display: grid;
+}
+
+.profile:hover{
+    border: 3px solid #FF8370;
+}
+
+#git{
+    color: black;
+}
+
+#linkedin{
+    color: black;
+}
+
+#linkedin:hover{
+    color: #0e76a8;
+}
+
+#git:hover{
+    color: gray;
+}
+
+hr{
+    width: 80px;
+    margin: 20px auto;
 }
