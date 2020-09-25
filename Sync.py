@@ -81,5 +81,5 @@ while(True):
 
 #import time
 
-eel.start('home.html',  mode='',port=80 )
+eel.start('main.html',  mode='',port=80 )
 

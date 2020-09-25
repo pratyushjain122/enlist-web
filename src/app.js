@@ -25,16 +25,18 @@ console.log("lol1");
 
 
 // console.log(demo);
-let xyz;
+let xyz = "B";
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 console.log("Ayooo");
+
+create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
 
 
 function CS_B(){
   xyz="B";
   console.log(xyz);
   console.log("function entered B");
-
+  //document.getElementById("content_container").reload();
   
 }
 
@@ -42,6 +44,8 @@ function CS_B1(){
   xyz="B1";
   console.log(xyz);
   console.log("function entered B1");
+  
+
 }
 
 function CS_B2(){
@@ -119,6 +123,7 @@ function add_task(){
 
       create_unfinished_task();
     }
+    
   }
 
 
