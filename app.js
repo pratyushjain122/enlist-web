@@ -77,15 +77,14 @@ function add_task(){
 
       // ID ,BATCH,KEY
 
-      async function getTime() {
-        let value = await eel.Sync(demo,xyz,uniqkey)();
+    //   async function getTime() {
+    //     let value = await eel.Sync(demo,xyz,uniqkey)();
 
-        console.log(value);
-      }
+    //     console.log(value);
+    // }
 
-      getTime();
+    // getTime();
       
-
 
       create_unfinished_task();
     }
