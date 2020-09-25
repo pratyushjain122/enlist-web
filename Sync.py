@@ -5,18 +5,18 @@ import random
 import eel
 
 
-
+print("python file called")
 cred=credentials.Certificate("firabase_enlist_sdk.json")
 
 firebase_admin.initialize_app(cred,{
 
-    'databaseURL':"https://enlist-duo.firebaseio.com/"
+    'databaseURL':"https://rock-you-f12d5.firebaseio.com/"
 
 })
 
 #user='bFdu73bKCrWUZISAz01gXMR46qE2'#'y920c43argQfQw6SM3CtlIUyyUC2'
 
-eel.init('enlist-web')
+eel.init('src')
 
 
 
@@ -81,4 +81,5 @@ while(True):
 
 #import time
 
-eel.start('home.html',  mode='', port=90)
+eel.start('home.html',  mode='',port=80 )
+

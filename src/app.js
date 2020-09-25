@@ -25,8 +25,37 @@ console.log("lol1");
 
 
 // console.log(demo);
-let xyz=prompt("enter the class");
+let xyz;
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
+console.log("Ayooo");
+
+
+function CS_B(){
+  xyz="B";
+  console.log(xyz);
+  console.log("function entered B");
+
+  
+}
+
+function CS_B1(){
+  xyz="B1";
+  console.log(xyz);
+  console.log("function entered B1");
+}
+
+function CS_B2(){
+  xyz="B2";
+  console.log(xyz);
+  console.log("function entered B2");
+}
+
+function CS_B3(){
+  xyz="B3";
+  console.log(xyz);
+  console.log("function entered B3");
+}
+
 
 function add_task(){
     input_box = document.getElementById("input_box");
@@ -77,18 +106,24 @@ function add_task(){
 
       // ID ,BATCH,KEY
 
-    //   async function getTime() {
-    //     let value = await eel.Sync(demo,xyz,uniqkey)();
-
-    //     console.log(value);
-    // }
-
-    // getTime();
+      async function getTime() {
+        let value = await eel.Sync(demo,xyz,uniqkey)();
+        console.log("sssssssssssss");
+        console.log(value);
+    }
+    getTime();
       
+      input_box.value = '';
+      input_date.value = '';
+      input_description.value = '';
 
       create_unfinished_task();
     }
   }
+
+
+
+  
 
   function create_unfinished_task(){
     unfinished_task_container = document.getElementsByClassName("container")[0];
@@ -170,6 +205,8 @@ function add_task(){
 
     });
 
+
+    //unfinished_task_container.innerHTML = "";
   }
   
 

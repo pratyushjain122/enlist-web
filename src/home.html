@@ -28,7 +28,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    
+    <!-- <script src="/eel.js"></script> -->
   </head>
 
   <body onload="create_unfinished_task()" oncontextmenu="return false">
@@ -69,20 +69,20 @@
   
   <div class="sidebar">
       <ul>
-        <li><a href="home.html">
+        <li><a>
           <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title" id="b">CS B</span></a></li>
-        <li><a href="home.html">
+          <span class="title" id="b" onclick="CS_B()">CS B</span></a></li>
+        <li><a >
           <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title" id="b1">CS B1</span>
+          <span class="title" id="b1" onclick="CS_B1()">CS B1</span>
           </a></li>
-        <li><a href="home.html">
+        <li><a >
           <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title" id="b2" >CS B2</span>
+          <span class="title" id="b2" onclick="CS_B2()">CS B2</span>
           </a></li>
-        <li><a href="home.html" class="active">
+        <li><a  class="active">
           <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title" id="b3">CS B3</span>
+          <span class="title" id="b3" onclick="CS_B3()">CS B3</span>
           </a></li>
         <li><a href="mailto:enlistwebapp@gmail.com">
           <span class="icon"><i class="fas fa-paper-plane"></i></span>
@@ -104,7 +104,7 @@
         <input id="input_box" type="text" placeholder="Enter a task"/>
         <input id="input_date" type="date"/>
         <input id="input_description" type="text" placeholder="Enter a description"/>
-        <button id="input_button" onclick="add_task();">
+        <button id="input_button" onclick="add_task()">
           Enter Task <i class="fa fa-arrow-circle-right"></i>
         </button>
       </div>
