@@ -16,7 +16,7 @@ firebase_admin.initialize_app(cred,{
 
 #user='bFdu73bKCrWUZISAz01gXMR46qE2'#'y920c43argQfQw6SM3CtlIUyyUC2'
 
-eel.init('web')
+eel.init('enlist-web')
 
 
 
@@ -81,4 +81,4 @@ while(True):
 
 #import time
 
-eel.start('hello.html',  mode='', port=90)
+eel.start('home.html',  mode='', port=90)

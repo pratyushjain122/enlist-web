@@ -74,7 +74,18 @@ function add_task(){
       // updates[xyz + "/" +"Task" + uniqkey] = task;
       firebase.database().ref().update(updates);
 
+
+      // ID ,BATCH,KEY
+
+      async function getTime() {
+        let value = await eel.Sync(demo,xyz,uniqkey)();
+
+        console.log(value);
+      }
+
+      getTime();
       
+
 
       create_unfinished_task();
     }
