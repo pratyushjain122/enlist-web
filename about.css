@@ -80,3 +80,11 @@ p{
 #decoration{
     font-weight: 600;
 }
+
+#team{
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+    /* border-radius: 10px;
+    border: 2px solid #FF8370; */
+}
