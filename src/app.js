@@ -29,7 +29,7 @@ let xyz = "B";
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 console.log("Ayooo");
 
-create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
+//create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
 
 
 function CS_B(){
@@ -98,24 +98,79 @@ function add_task(){
         description: input_description.value
       };
 
+
+
+      ref = firebase.database().ref();
+
+      // var count = 0;
+      // ref.on('value',gotData,ErrorData);
+
+      // function gotData(data){
+      //   //console.log(data.val());
+      //   let allData = data.val();
+      //   let keys = Object.keys(allData);
+      //   console.log(keys); 
+      //   console.log("i got the data");
+      // }
+      
+      // function ErrorData(err){
+      //   console.log(err);
+      //   console.log("i got an error");
+      // }
+      var updates = {};
+      
+      //var rootRef = firebase.database.ref();
+      var urlRef = ref.child("Source/" + xyz);
+      urlRef.once("value", function(snapshot) {
+        snapshot.forEach(function(child) {
+          //console.log(child.val());
+          let allchild = child.val();
+          //let keys = Object.keys(allchild);
+          //console.log(allchild);
+        
+          keystring="";
+          for(let i=0; i< (allchild!=0);i++){
+            keystring+=allchild + " ";
+            keySplittedArray = keystring.split(" ");
+
+
+            for(let i=0; i<keySplittedArray.length;i++){
+              
+              updates["/To-Do-List/" + keySplittedArray[i] +"/" + xyz + "/" +"Task" + uniqkey] = task;
+              firebase.database().ref().update(updates);
+
+            }
+          }
+        });
+          console.log(keystring);
+          console.log(keySplittedArray.length);
+        
+        
+      });
+
+
+
+
+
+     
       var updates1 = {};
       updates1["/Source/" + xyz + "/" + demo] = demo; //replace key with userUID
       firebase.database().ref().update(updates1);
 
-      var updates = {};
-      updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
-      // updates[xyz + "/" +"Task" + uniqkey] = task;
-      firebase.database().ref().update(updates);
+      // var updates = {};
+      // updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
+      // // updates[xyz + "/" +"Task" + uniqkey] = task;
+      // firebase.database().ref().update(updates);
 
 
       // ID ,BATCH,KEY
 
-      async function getTime() {
-        let value = await eel.Sync(demo,xyz,uniqkey)();
-        console.log("sssssssssssss");
-        console.log(value);
-    }
-    getTime();
+    //   async function getTime() {
+    //     let value = await eel.Sync(demo,xyz,uniqkey)();
+    //     console.log("sssssssssssss");
+    //     console.log(value);
+    // }
+    // getTime();
       
       input_box.value = '';
       input_date.value = '';
