@@ -100,7 +100,7 @@ function add_task(){
 
 
 
-      ref = firebase.database().ref();
+      
 
       // var count = 0;
       // ref.on('value',gotData,ErrorData);
@@ -117,34 +117,39 @@ function add_task(){
       //   console.log(err);
       //   console.log("i got an error");
       // }
-      var updates = {};
       
-      //var rootRef = firebase.database.ref();
+      ref = firebase.database().ref();
+      
       var urlRef = ref.child("Source/" + xyz);
+
       urlRef.once("value", function(snapshot) {
         snapshot.forEach(function(child) {
-          //console.log(child.val());
           let allchild = child.val();
           //let keys = Object.keys(allchild);
-          //console.log(allchild);
+          console.log(allchild);
         
-          keystring="";
-          for(let i=0; i< (allchild!=0);i++){
-            keystring+=allchild + " ";
-            keySplittedArray = keystring.split(" ");
-
-
+          // keystring="";
+          // //for(let i=0; i< (allchild!=0);i++){
+          //   keystring+=allchild + " ";
+          //   console.log(keystring);
+            keySplittedArray = allchild.split(' ');
+            //console.log(keySplittedArray);
+          console.log(keySplittedArray.length);
             for(let i=0; i<keySplittedArray.length;i++){
-              
+
+              console.log(keySplittedArray[i]);
+              var updates = {};
               updates["/To-Do-List/" + keySplittedArray[i] +"/" + xyz + "/" +"Task" + uniqkey] = task;
+              console.log(updates);
               firebase.database().ref().update(updates);
+              //console.log(updates);
 
             }
-          }
-        });
-          console.log(keystring);
-          console.log(keySplittedArray.length);
-        
+         
+          });
+          //console.log(keystring);
+          //console.log(keySplittedArray.length);
+          //create_unfinished_task();
         
       });
 
@@ -198,6 +203,7 @@ function add_task(){
       });
       for(var i, i = 0; i < task_array.length; i++){
         task_date = task_array[i][0];
+        //console.log(task_date);
         task_title = task_array[i][3];
         task_key = task_array[i][2];
         task_description = task_array[i][1];
