@@ -14,6 +14,8 @@ let demo;
       } else {
         // No user is signed in.
       }
+
+      
     });
 console.log("lol1");
 
@@ -25,10 +27,10 @@ console.log("lol1");
 
 
 // console.log(demo);
-let xyz = "B";
+let xyz;
 let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 console.log("Ayooo");
-
+alert("Choose any class");
 //create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
 
 
@@ -37,6 +39,11 @@ function CS_B(){
   console.log(xyz);
   console.log("function entered B");
   //document.getElementById("content_container").reload();
+  var updates1 = {};
+      updates1["/Source/" + xyz + "/" + demo] = demo; 
+      console.log(updates1);//replace key with userUID
+      firebase.database().ref().update(updates1);
+
   
 }
 
@@ -45,6 +52,10 @@ function CS_B1(){
   console.log(xyz);
   console.log("function entered B1");
   
+  var updates1 = {};
+  updates1["/Source/" + xyz + "/" + demo] = demo; 
+  console.log(updates1);//replace key with userUID
+  firebase.database().ref().update(updates1);
 
 }
 
@@ -52,13 +63,27 @@ function CS_B2(){
   xyz="B2";
   console.log(xyz);
   console.log("function entered B2");
+  var updates1 = {};
+      updates1["/Source/" + xyz + "/" + demo] = demo; 
+      console.log(updates1);//replace key with userUID
+      firebase.database().ref().update(updates1);
+
 }
 
 function CS_B3(){
   xyz="B3";
   console.log(xyz);
   console.log("function entered B3");
+  var updates1 = {};
+      updates1["/Source/" + xyz + "/" + demo] = demo; 
+      console.log(updates1);//replace key with userUID
+      firebase.database().ref().update(updates1);
+
 }
+
+
+      
+      
 
 
 function add_task(){
@@ -71,6 +96,8 @@ function add_task(){
       // our boxes have data and we take database
       
       var key = firebase.database().ref();
+      console.log(key);
+
 
       if (xyz === "B") {
           key = key.child("To-Do-List/"+ demo + "/B/").push().key;
@@ -158,9 +185,7 @@ function add_task(){
 
 
      
-      var updates1 = {};
-      updates1["/Source/" + xyz + "/" + demo] = demo; //replace key with userUID
-      firebase.database().ref().update(updates1);
+      
 
       // var updates = {};
       // updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
