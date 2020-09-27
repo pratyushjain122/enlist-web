@@ -552,3 +552,12 @@ body::-webkit-scrollbar-thumb
     margin-bottom: 5px;
     width: 100%;
 }
+
+#task_description{
+  background-color: #fff;
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 15px;
+  float: left;
+  width: 100%;
+}
