@@ -12,99 +12,71 @@ let d=document.getElementById("B3");
 let demo;
     firebase.auth().onAuthStateChanged(function(user) {
       if (user!==null) {
-        // User is signed in.
-        console.log(user.uid);
-        console.log("lol");
         demo = user.uid;
        
       } else {
-        // No user is signed in.
-        alert("Login First.");
+  
+        alert("Please login");
         window.location.assign('./main.html');
       }
 
       
     });
-console.log("lol1");
 
  function signOut(){
   firebase.auth().signOut();
-  console.log("lolllllllllllllllllllllll");
 }
 
 
 
 let xyz;
-// let a=document.getElementById("B");
-//console.log(a.id);
-  xyz="B";
-  console.log(xyz);
-  console.log("function entered B");
-  
-
-// document.addEventListener("DOMContentLoaded", function(event) {
-//   document.getElementById("B2").disabled = true;
-// });
-// let a=document.getElementById("B1");
-// console.log(a);
-
-
-
-// console.log(demo);
+xyz="B";
 
 let uniqkey;
-console.log(uniqkey);
-alert("Choose any class");
+
+alert("Choose Your Class or Division");
 
 
 
 function CS_B(){
-
+  alert("You are in CS-B");
   let a=document.getElementById("B");
-console.log(a.id);
+
   xyz="B";
-  console.log(xyz);
-  console.log("function entered B");
-  //document.getElementById("content_container").reload();
+
   var updates1 = {};
       updates1["/Source/" + xyz + "/" + demo] = demo; 
-      console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
       create_unfinished_task();
 }
 
 function CS_B1(){
 let a=document.getElementById("B1");
-console.log(a.id);
+alert("You are in B1 Division");
   xyz="B1";
-  console.log(xyz);
-  console.log("function entered B1");
+  
   
   var updates1 = {};
   updates1["/Source/" + xyz + "/" + demo] = demo; 
-  console.log(updates1);//replace key with userUID
   firebase.database().ref().update(updates1);
   create_unfinished_task();
 }
 
 function CS_B2(){
   xyz="B2";
-  console.log(xyz);
-  console.log("function entered B2");
+  alert("You are in B2 Division");
   var updates1 = {};
       updates1["/Source/" + xyz + "/" + demo] = demo; 
-      console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
       create_unfinished_task();
 }
 
 function CS_B3(){
   xyz="B3";
-  console.log(xyz);
-  console.log("function entered B3");
+  alert("You are in B3 Division");
   var updates1 = {};
       updates1["/Source/" + xyz + "/" + demo] = demo; 
-      console.log(updates1);//replace key with userUID
+
       firebase.database().ref().update(updates1);
       create_unfinished_task();
 }
@@ -120,35 +92,15 @@ function Division(){
     
   }
   else if(Number(prnnn) >= 073 && Number(prnnn) <= 095){
-    //b2.setEnabled(false);
-    //b3.setEnabled(false);
-    // console.log("I am in your dreams");
-    // c.id.disabled = true;
-    // c.id.disabled = true;
+    
     CS_B1();
   }
   else if(Number(prnnn) >= 096 && Number(prnnn) <= 119){
-    //b1.setEnabled(false);
-    //b3.setEnabled(false);
-    // document.getElementById("B1").id.disabled = true;
-    // document.getElementById("B3").id.disabled = true;
+    
     CS_B2();
   }
   else if(Number(prnnn) >= 120 && Number(prnnn) <=145){
-    //b1.setEnabled(false);
-    //b2.setEnabled(false);
-    console.log("I am in");
-    // document.getElementById("B1").disabled = true;
-    // console.log("WE won");
-    // document.getElementById("B2").disabled = true;
-    // let z = document.getElementById("B1");
-    // z.id.style.pointerEvents="none";
-    // z.id.style.cursor="default";
-    //c.id.style.pointerEvents="none";
-    //c.id.style.cursor="default";
-    // let b=document.getElementById("B1");
-    // b.id.disabled = true;
-
+    
     CS_B3();
   
   }
@@ -166,34 +118,28 @@ function add_task(){
 
 
     var dateControl = document.querySelector('input[type="date"]');
-    //dateControl.value = '2017-06-01';
-    console.log(dateControl.value);
+    
     date = dateControl.value.split("-");
      let day = date[2];
      let month = date[1];
-      console.log(typeof(input_date));
-      console.log(day);
-      console.log(typeof(month));
-      console.log(Number(month));
-      //let date = new Date(day,month,year)
-      let currentDateString;
-      var montharray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+      
+    var montharray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
-      for(let i=0;i<montharray.length;i++){
+    for(let i=0;i<montharray.length;i++){
         if(i===Number(month)){
           month=montharray[i-1];
         }
       }
 
       let finalDate = day + " " + month;
-      console.log(finalDate);
+      
 
 
     if(input_box.value.length != 0 && finalDate.length != 0){
       // our boxes have data and we take database
       
       var key = firebase.database().ref();
-      console.log(key);
+     
 
 
       if (xyz === "B") {
@@ -225,37 +171,16 @@ function add_task(){
       let personal = document.getElementById("personalList");
       let shared = document.getElementById("sharedList");
 
-      console.log(personal);
-      console.log(shared);
+      
 
       if(personal.checked){
-              console.log("Added to personal");
               var updates = {};
               updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
-              console.log(updates);
               firebase.database().ref().update(updates);
 
       }else{
-        console.log("Added to shared");
-
-      
       
 
-      // var count = 0;
-      // ref.on('value',gotData,ErrorData);
-
-      // function gotData(data){
-      //   //console.log(data.val());
-      //   let allData = data.val();
-      //   let keys = Object.keys(allData);
-      //   console.log(keys); 
-      //   console.log("i got the data");
-      // }
-      
-      // function ErrorData(err){
-      //   console.log(err);
-      //   console.log("i got an error");
-      // }
       
       ref = firebase.database().ref();
       
@@ -264,33 +189,21 @@ function add_task(){
       urlRef.once("value", function(snapshot) {
         snapshot.forEach(function(child) {
           let allchild = child.val();
-          //let keys = Object.keys(allchild);
-          console.log(allchild);
-        
-          // keystring="";
-          // //for(let i=0; i< (allchild!=0);i++){
-          //   keystring+=allchild + " ";
-          //   console.log(keystring);
+         
             keySplittedArray = allchild.split(' ');
-            //console.log(keySplittedArray);
-          console.log(keySplittedArray.length);
           
             for(let i=0; i<keySplittedArray.length;i++){
 
-              console.log(keySplittedArray[i]);
+             
               var updates = {};
               updates["/To-Do-List/" + keySplittedArray[i] +"/" + xyz + "/" +"Task" + uniqkey] = task;
-              console.log(updates);
+             
               firebase.database().ref().update(updates);
-              //console.log(updates);
-
+            
             }
          
           });
-          //console.log(keystring);
-          //console.log(keySplittedArray.length);
-          //create_unfinished_task();
-        
+          
       });
 
 
@@ -322,7 +235,7 @@ function add_task(){
       });
       for(var i, i = 0; i < task_array.length; i++){
         task_date = task_array[i][0];
-        //console.log(task_date);
+       
         task_title = task_array[i][3];
         task_key = task_array[i][2];
         task_description = task_array[i][1];
@@ -394,20 +307,19 @@ function add_task(){
 
     });
 
-    //  description= '';
-    //unfinished_task_container.innerHTML = "";
+   
   }
   
 
   function task_done(task, task_tool){
     finished_task_container = document.getElementsByClassName("container")[1];
     task.removeChild(task_tool);
-    //finished_task_container.append(task);
+    
 
     var key = task.getAttribute("data-key");
     
 
-    // delete our task from unfinished
+   
     task_delete(task);
     
   }
@@ -447,7 +359,7 @@ function add_task(){
     description.setAttribute("contenteditable", false);
     description.setAttribute("id", "task_description");
 
-    // change in firebase to
+    
     var key = task.getAttribute("data-key");
     var task_obj = {
       title: task.childNodes[0].childNodes[0].innerHTML,
@@ -466,7 +378,7 @@ function add_task(){
     key = task.getAttribute("data-key");
     task_to_remove = firebase.database().ref("To-Do-List/" + demo +"/" + xyz + "/" +"Task"  + key);
     task_to_remove.remove();
-    console.log("delete hogya 1");
+
 
     // remove from html view or whatevesss
     task.remove();
