@@ -237,7 +237,7 @@ body::-webkit-scrollbar-thumb
 }
 
 #input_box{
-    width: 80%;
+    width: 50%;
     float: left;
     height: 50px;
     background-color: none;
@@ -257,7 +257,7 @@ body::-webkit-scrollbar-thumb
 }
 
 #input_date{
-    width: 20%;
+    width: 50%;
     float: left;
     height: 50px;
     background-color: none;
