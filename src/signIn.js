@@ -138,7 +138,7 @@ function signIn(){
                                 flag =1; break;
                             }
                             case "134":if(user.email.value===("rahul.mansharamani.btech2019@sitpune.edu.in")){
-                                console.log("aaaaaaaaaaaaaa");
+                                console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                                 // return true;
                                 flag =1; break;
                             }
@@ -280,7 +280,10 @@ function signIn(){
                             case "132":if(btechEmail===("preksha.asati.btech2019@sitpune.edu.in")){
                                 flag =1; break;
                             }
-                            // default : alert("Enter valid PRN");
+                            // default : 
+                            //     alert("Enter valid PRN");
+                            //     break;
+
                     
                         }
 
