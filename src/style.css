@@ -15,7 +15,7 @@ body{
 
 body::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #F5F5F5;
 }
 
@@ -227,7 +227,7 @@ body::-webkit-scrollbar-thumb
 #task_input_container{
     background-color: #fff;
     margin: 10px auto;
-    height: 220px;
+    height: 240px;
     width: 90%;
     margin-bottom: 60px;
     border: 2px solid red;
@@ -336,6 +336,21 @@ body::-webkit-scrollbar-thumb
     outline:none;
 }
 
+#hello2{
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#hello{
+  /* margin: auto; */
+  margin-left: calc(35% - 40px);
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 #input_button{
     width: 60%;
@@ -363,6 +378,8 @@ body::-webkit-scrollbar-thumb
 #input_button:active{
     transform: translateY(4px);
 }
+
+
 
 .header{
     float: left;
@@ -397,7 +414,7 @@ body::-webkit-scrollbar-thumb
 
 .container::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #F5F5F5;
 }
 
@@ -431,7 +448,7 @@ body::-webkit-scrollbar-thumb
 
 #task_data{
     display: inline-block;
-    float: left;
+    float: none;
     width: 200px;
     height: 100%;
     margin-left: 20px;
@@ -439,7 +456,7 @@ body::-webkit-scrollbar-thumb
 
 #task_tool{
     display: inline-block;
-    float: right;
+    float: none;
     height: 100%;
     display: flex;
     justify-content: center;
