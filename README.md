@@ -10,7 +10,8 @@
 
 &nbsp;
 <h3> ➡ If you want to understand the working of the whole system then hop on the 
-main repo.      👉 <a href="https://github.com/prakhar-agarwall/enlist.git">Here</a></h3>
+main repo.</h3>
+<h3 align="center">👉<a href="https://github.com/prakhar-agarwall/enlist.git">Here</a></h3>
 
 
 
