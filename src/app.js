@@ -12,7 +12,7 @@ let d=document.getElementById("B3");
 
 let demo;
     firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
+      if (user!==null) {
         // User is signed in.
         console.log(user.uid);
         console.log("lol");
@@ -20,6 +20,8 @@ let demo;
        
       } else {
         // No user is signed in.
+        alert("Login First.");
+        window.location.assign('./main.html');
       }
 
       
