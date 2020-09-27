@@ -91,6 +91,8 @@ function add_task(){
     input_date = document.getElementById("input_date");
     input_description = document.getElementById("input_description");
     
+    
+
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
       // our boxes have data and we take database

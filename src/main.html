@@ -20,18 +20,20 @@
     <img id="gif" src="/Extra/logo.gif" alt="Logo">
 
     <div>
-        <input id="prn" type="text" placeholder="Enter your PRN">
+        <input id="prn" type="text" placeholder="Enter PRN (Last 3 digit)" >
     </div>
     
-    <div id="signin"><h3>(Sign-in with B.Tech ID)</h3>
-    <div id="firebaseui-auth-container"></div>
+    <!-- <div id="signin"><h3>(Sign-in with B.Tech ID)</h3>
+    <div> -->
+        <button id="btechEmail" onclick="signInWithGoogle()">Sign-in with B.Tech ID</button>
+    </div>
     </div>
 
 
 
     
     <script src="firebase.js"></script>
-    <script src="login.js"></script>
+    <script src="loginTEST.js"></script>
     <!-- <script src="app.js"></script> -->
 </body>
 </html>
