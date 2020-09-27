@@ -43,8 +43,6 @@ function CS_B(){
       updates1["/Source/" + xyz + "/" + demo] = demo; 
       console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
-
-  
 }
 
 function CS_B1(){
@@ -127,8 +125,23 @@ function add_task(){
         description: input_description.value
       };
 
+      let personal = document.getElementById("personalList");
+      let shared = document.getElementById("sharedList");
 
+      console.log(personal);
+      console.log(shared);
 
+      if(personal.checked){
+              console.log("Added to personal");
+              var updates = {};
+              updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
+              console.log(updates);
+              firebase.database().ref().update(updates);
+
+      }else{
+        console.log("Added to shared");
+
+      
       
 
       // var count = 0;
@@ -164,6 +177,7 @@ function add_task(){
             keySplittedArray = allchild.split(' ');
             //console.log(keySplittedArray);
           console.log(keySplittedArray.length);
+          
             for(let i=0; i<keySplittedArray.length;i++){
 
               console.log(keySplittedArray[i]);
@@ -183,7 +197,7 @@ function add_task(){
       });
 
 
-
+    }
 
 
      
