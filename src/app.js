@@ -92,6 +92,17 @@ function add_task(){
     
     uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
+      console.log(typeof(input_date));
+
+
+      if(month >= 10 && month <=12){
+        currentDateString = day + "-" + month + "-" + year;
+      }
+      else{
+        currentDateString = day + "-" + "0" + month + "-" + year;
+      }
+
+
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
       // our boxes have data and we take database
