@@ -1,6 +1,13 @@
-
+var favoritemovie = sessionStorage.getItem("favoriteMovie");
+console.log(favoritemovie);
+let prnnn = favoritemovie;
 //import {demo} from './login'; 
+console.log(prnnn);
 
+let a=document.getElementById("B");
+
+let c=document.getElementById("B2");
+let d=document.getElementById("B3");
 
 
 let demo;
@@ -26,15 +33,49 @@ console.log("lol1");
 
 
 
-// console.log(demo);
 let xyz;
+// let a=document.getElementById("B");
+//console.log(a.id);
+  xyz="B";
+  console.log(xyz);
+  console.log("function entered B");
+  // //document.getElementById("content_container").reload();
+  // var updates1 = {};
+  //     updates1["/Source/" + xyz + "/" + demo] = demo; 
+  //     console.log(updates1);//replace key with userUID
+  //     firebase.database().ref().update(updates1);
+  //     create_unfinished_task();
+
+// document.addEventListener("DOMContentLoaded", function(event) {
+//   document.getElementById("B2").disabled = true;
+// });
+// let a=document.getElementById("B1");
+// console.log(a);
+
+
+
+// console.log(demo);
+
 let uniqkey;
 console.log(uniqkey);
 alert("Choose any class");
 //create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
+// let prnnn = document.getElementById("prn");
+// console.log(prnnn);
+// console.log(prnnn.value);
+
+
+
+
+
+
+
 
 
 function CS_B(){
+
+  let a=document.getElementById("B");
+console.log(a.id);
   xyz="B";
   console.log(xyz);
   console.log("function entered B");
@@ -47,6 +88,8 @@ function CS_B(){
 }
 
 function CS_B1(){
+let a=document.getElementById("B1");
+console.log(a.id);
   xyz="B1";
   console.log(xyz);
   console.log("function entered B1");
@@ -81,8 +124,66 @@ function CS_B3(){
 }
 
 
-      
-      
+function Division(){
+
+  if(Number(prnnn) >= 073 && Number(prnnn) <= 095){
+    //b2.setEnabled(false);
+    //b3.setEnabled(false);
+    // console.log("I am in your dreams");
+    // c.id.disabled = true;
+    // c.id.disabled = true;
+    CS_B1();
+  }
+  else if(Number(prnnn) >= 096 && Number(prnnn) <= 129){
+    //b1.setEnabled(false);
+    //b3.setEnabled(false);
+    // document.getElementById("B1").id.disabled = true;
+    // document.getElementById("B3").id.disabled = true;
+    CS_B2();
+  }
+  else if(Number(prnnn) >= 130 && Number(prnnn) <=145){
+    //b1.setEnabled(false);
+    //b2.setEnabled(false);
+    console.log("I am in");
+    // document.getElementById("B1").disabled = true;
+    // console.log("WE won");
+    // document.getElementById("B2").disabled = true;
+    // let z = document.getElementById("B1");
+    // z.id.style.pointerEvents="none";
+    // z.id.style.cursor="default";
+    //c.id.style.pointerEvents="none";
+    //c.id.style.cursor="default";
+    // let b=document.getElementById("B1");
+    // b.id.disabled = true;
+
+    CS_B3();
+  
+  }
+
+
+}   
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function add_task(){
@@ -92,7 +193,7 @@ function add_task(){
     
     uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
-    
+
     var dateControl = document.querySelector('input[type="date"]');
     //dateControl.value = '2017-06-01';
     console.log(dateControl.value);

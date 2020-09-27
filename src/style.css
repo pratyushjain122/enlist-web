@@ -538,7 +538,7 @@ body::-webkit-scrollbar-thumb
     font-weight: bold;
     font-size: 15px;
     float: left;
-    width: 100%;
+    width: 200px;
 }
 
 #task_date{
@@ -559,5 +559,5 @@ body::-webkit-scrollbar-thumb
   font-weight: normal;
   font-size: 15px;
   float: left;
-  width: 100%;
+  width: 300px;
 }

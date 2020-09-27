@@ -1,4 +1,4 @@
-let prnn = document.getElementById("prn");
+var prnn = document.getElementById("prn");
 //let Email = document.getElementById("user.email");
 
 let PRNlength = prnn.value.length;
@@ -6,11 +6,18 @@ console.log("function called");
 console.log(prnn);
 console.log(prnn.value);
 
+var favoritemovie;
+
 
 function signInWithGoogle(){
     //console.log(PRNlength);
     console.log(prnn.value);
-    
+    favoritemovie = prnn.value;
+    console.log("We did it");
+    sessionStorage.setItem("favoriteMovie", favoritemovie);
+    console.log("We did it");
+
+
     if(prnn.value === ''){
         alert("Please enter the PRN");
         
@@ -23,6 +30,18 @@ function signInWithGoogle(){
         }
         else{
             console.log("lenght is of 3");
+            console.log(prnn.value);
+                
+              
+            
+
+            
+
+
+
+
+
+            
             signIn();
               
         }
