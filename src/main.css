@@ -15,7 +15,7 @@ body{
 #prn{
     font-family: 'Montserrat', sans-serif;
     float: left;
-    width: 350px;
+    width: 300px;
     height: 50px;
     border: 2px solid #FF8370;
     border-radius: 5px;
@@ -32,18 +32,32 @@ body{
 }
 
 
-#signin{
+#prn:focus{
+    border: 4px solid #FF8370;
+    outline: none;
+}
+
+
+#btechEmail{
     font-family: 'Montserrat', sans-serif;
     float: left;
-    font-size: small;
+    background: white;
+    font-size: large;
     color: rgb(107, 103, 103);
     text-align: center;
     border: 2px solid #FF8370;
     border-radius: 5px;
+    padding: 10px 20px;
 }
 
 
-#signin:hover{
+#btechEmail:hover{
     border: 4px solid #FF8370;
     outline:none;
+    cursor: pointer;
+}
+
+#btechEmail:focus{
+    border: 4px solid #FF8370;
+    outline: none;
 }
