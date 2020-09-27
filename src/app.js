@@ -28,8 +28,8 @@ console.log("lol1");
 
 // console.log(demo);
 let xyz;
-let uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
-console.log("Ayooo");
+let uniqkey;
+console.log(uniqkey);
 alert("Choose any class");
 //create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
 
@@ -43,6 +43,7 @@ function CS_B(){
       updates1["/Source/" + xyz + "/" + demo] = demo; 
       console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
+      create_unfinished_task();
 }
 
 function CS_B1(){
@@ -54,7 +55,7 @@ function CS_B1(){
   updates1["/Source/" + xyz + "/" + demo] = demo; 
   console.log(updates1);//replace key with userUID
   firebase.database().ref().update(updates1);
-
+  create_unfinished_task();
 }
 
 function CS_B2(){
@@ -65,7 +66,7 @@ function CS_B2(){
       updates1["/Source/" + xyz + "/" + demo] = demo; 
       console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
-
+      create_unfinished_task();
 }
 
 function CS_B3(){
@@ -76,7 +77,7 @@ function CS_B3(){
       updates1["/Source/" + xyz + "/" + demo] = demo; 
       console.log(updates1);//replace key with userUID
       firebase.database().ref().update(updates1);
-
+      create_unfinished_task();
 }
 
 
@@ -89,7 +90,7 @@ function add_task(){
     input_date = document.getElementById("input_date");
     input_description = document.getElementById("input_description");
     
-    
+    uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
 
     if(input_box.value.length != 0 && input_date.value.length != 0){
@@ -228,9 +229,6 @@ function add_task(){
   }
 
 
-
-  
-
   function create_unfinished_task(){
     unfinished_task_container = document.getElementsByClassName("container")[0];
     unfinished_task_container.innerHTML = "";
@@ -308,11 +306,15 @@ function add_task(){
         task_edit_button.append(fa_edit);
         task_tool.append(task_delete_button);
         task_delete_button.append(fa_delete);
+
+
+
+       
       }
 
     });
 
-
+    //  description= '';
     //unfinished_task_container.innerHTML = "";
   }
   
