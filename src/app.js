@@ -92,19 +92,32 @@ function add_task(){
     
     uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
+    
+    var dateControl = document.querySelector('input[type="date"]');
+    //dateControl.value = '2017-06-01';
+    console.log(dateControl.value);
+    date = dateControl.value.split("-");
+     let day = date[2];
+     let month = date[1];
       console.log(typeof(input_date));
+      console.log(day);
+      console.log(typeof(month));
+      console.log(Number(month));
+      //let date = new Date(day,month,year)
+      let currentDateString;
+      var montharray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
-
-      if(month >= 10 && month <=12){
-        currentDateString = day + "-" + month + "-" + year;
+      for(let i=0;i<montharray.length;i++){
+        if(i===Number(month)){
+          month=montharray[i-1];
+        }
       }
-      else{
-        currentDateString = day + "-" + "0" + month + "-" + year;
-      }
+
+      let finalDate = day + " " + month;
+      console.log(finalDate);
 
 
-
-    if(input_box.value.length != 0 && input_date.value.length != 0){
+    if(input_box.value.length != 0 && finalDate.length != 0){
       // our boxes have data and we take database
       
       var key = firebase.database().ref();
@@ -132,7 +145,7 @@ function add_task(){
 
       var task = {
         title: input_box.value,
-        deadline: input_date.value,
+        deadline: finalDate,
         key: uniqkey,
         description: input_description.value
       };
