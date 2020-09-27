@@ -1,8 +1,7 @@
 var favoritemovie = sessionStorage.getItem("favoriteMovie");
 console.log(favoritemovie);
 let prnnn = favoritemovie;
-//import {demo} from './login'; 
-console.log(prnnn);
+
 
 let a=document.getElementById("B");
 
@@ -39,12 +38,7 @@ let xyz;
   xyz="B";
   console.log(xyz);
   console.log("function entered B");
-  // //document.getElementById("content_container").reload();
-  // var updates1 = {};
-  //     updates1["/Source/" + xyz + "/" + demo] = demo; 
-  //     console.log(updates1);//replace key with userUID
-  //     firebase.database().ref().update(updates1);
-  //     create_unfinished_task();
+  
 
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   document.getElementById("B2").disabled = true;
@@ -59,16 +53,6 @@ let xyz;
 let uniqkey;
 console.log(uniqkey);
 alert("Choose any class");
-//create_unfinished_task(); //FETCH TABHI HOGA JAB USMAI KOI DATA HOGA
-// let prnnn = document.getElementById("prn");
-// console.log(prnnn);
-// console.log(prnnn.value);
-
-
-
-
-
-
 
 
 
@@ -126,7 +110,14 @@ function CS_B3(){
 
 function Division(){
 
-  if(Number(prnnn) >= 073 && Number(prnnn) <= 095){
+
+  if(Number(prnnn) == 120 || Number(prnnn) == 126 || Number(prnnn) == 129 || Number(prnnn) ==134){
+    CS_B1();
+    CS_B2();
+    CS_B3();
+    
+  }
+  else if(Number(prnnn) >= 073 && Number(prnnn) <= 095){
     //b2.setEnabled(false);
     //b3.setEnabled(false);
     // console.log("I am in your dreams");
@@ -134,14 +125,14 @@ function Division(){
     // c.id.disabled = true;
     CS_B1();
   }
-  else if(Number(prnnn) >= 096 && Number(prnnn) <= 129){
+  else if(Number(prnnn) >= 096 && Number(prnnn) <= 119){
     //b1.setEnabled(false);
     //b3.setEnabled(false);
     // document.getElementById("B1").id.disabled = true;
     // document.getElementById("B3").id.disabled = true;
     CS_B2();
   }
-  else if(Number(prnnn) >= 130 && Number(prnnn) <=145){
+  else if(Number(prnnn) >= 120 && Number(prnnn) <=145){
     //b1.setEnabled(false);
     //b2.setEnabled(false);
     console.log("I am in");
@@ -163,28 +154,6 @@ function Division(){
 
 }   
      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function add_task(){
     input_box = document.getElementById("input_box");
@@ -326,23 +295,7 @@ function add_task(){
     }
 
 
-     
-      
 
-      // var updates = {};
-      // updates["/To-Do-List/" + demo +"/" + xyz + "/" +"Task" + uniqkey] = task;
-      // // updates[xyz + "/" +"Task" + uniqkey] = task;
-      // firebase.database().ref().update(updates);
-
-
-      // ID ,BATCH,KEY
-
-    //   async function getTime() {
-    //     let value = await eel.Sync(demo,xyz,uniqkey)();
-    //     console.log("sssssssssssss");
-    //     console.log(value);
-    // }
-    // getTime();
       
       input_box.value = '';
       input_date.value = '';

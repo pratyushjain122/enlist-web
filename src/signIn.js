@@ -32,16 +32,6 @@ function signInWithGoogle(){
             console.log("lenght is of 3");
             console.log(prnn.value);
                 
-              
-            
-
-            
-
-
-
-
-
-            
             signIn();
               
         }
@@ -312,8 +302,6 @@ function signIn(){
                       }else{
                           alert("Please enter you PRN");
                       }
-
-
 
                         }
                         else{
