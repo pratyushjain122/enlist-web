@@ -33,7 +33,7 @@ let demo;
       } else {
   
         alert("Please login");
-        window.location.assign('./main.html');
+        window.location.assign('./index.html');
       }
 
       
