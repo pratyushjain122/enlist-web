@@ -13,9 +13,9 @@ document.onkeydown = function(e) {
   }
   }
   
-  
+
 var favoritemovie = sessionStorage.getItem("favoriteMovie");
-console.log(favoritemovie);
+
 let prnnn = favoritemovie;
 
 
@@ -49,8 +49,11 @@ let xyz;
 xyz="B";
 
 let uniqkey;
-
+var finalDate;
 alert("Choose Your Class or Division");
+
+
+var db = firebase.firestore();
 
 
 
@@ -132,23 +135,33 @@ function add_task(){
     
     uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
 
-
-    var dateControl = document.querySelector('input[type="date"]');
     
-    date = dateControl.value.split("-");
-     let day = date[2];
-     let month = date[1];
-      
-    var montharray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
-    for(let i=0;i<montharray.length;i++){
-        if(i===Number(month)){
-          month=montharray[i-1];
+      var cdate = new Date();
+      cdate.setDate(cdate.getDate());
+      
+      $('#input_date').datepicker({ 
+      // startDate: cdate,
+      minDate: cdate
+      });
+
+
+      var dateControl = document.querySelector('#input_date');
+      date = dateControl.value.split("/");
+      let day = date[1];
+      let month = date[0];
+      let year = date[2];
+
+      var montharray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+
+      for(let i=0;i<montharray.length;i++){
+          if(i===Number(month)){
+            month=montharray[i-1];
+          }
         }
-      }
-
-      let finalDate = day + " " + month;
-      
+        
+        finalDate = day + " " + month ;
+  
 
 
     if(input_box.value.length != 0 && finalDate.length != 0){
@@ -183,6 +196,53 @@ function add_task(){
         key: uniqkey,
         description: input_description.value
       };
+
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var Currentdate = today.getDate() +' '+ today.getMonth()+' '+ today.getFullYear();
+      
+      let ZeroDate = today.getDate();
+        if(ZeroDate === 1 || ZeroDate === 2 || ZeroDate === 3 || ZeroDate === 4 || ZeroDate === 5 || ZeroDate === 6 || ZeroDate === 7 || ZeroDate === 8 || ZeroDate === 9){
+          ZeroDate = '0' + ZeroDate;
+          Currentdate =  ZeroDate +' '+today.getMonth()+' '+today.getFullYear();
+        }else{
+          Currentdate =  ZeroDate +' '+today.getMonth()+' '+today.getFullYear();
+        }
+
+        let dateC = Currentdate.split(" ");
+        let dayC = dateC[0];
+        let monthC = dateC[1];
+        let yearC = dateC[2];
+  
+        var montharrayC = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+  
+        for(let i=0;i<montharray.length;i++){
+            if(i===Number(monthC)){
+              monthC=montharrayC[i-1];
+            }
+          }
+          Currentdate = dayC + " " + monthC + " " + yearC;
+
+
+
+
+      const docRef = db.doc("Analysis/" + time);
+      docRef.set({
+          date: Currentdate,
+          title: input_box.value,
+          uid: demo   
+      })
+      .then(function(docRef) {
+      })
+      .catch(function(error) {
+        console.error("Error adding document: ", error);
+      });
+
+
+
+
+
+
 
       let personal = document.getElementById("personalList");
       let shared = document.getElementById("sharedList");
@@ -287,19 +347,19 @@ function add_task(){
         task_done_button.setAttribute('id', 'task_done_button');
         task_done_button.setAttribute('onclick', "task_done(this.parentElement.parentElement, this.parentElement)");
         fa_done = document.createElement('i');
-        fa_done.setAttribute('class', 'fa fa-check');
+        fa_done.setAttribute('class', 'fa fa-check fa-2x');
 
         task_edit_button = document.createElement('button');
         task_edit_button.setAttribute('id', 'task_edit_button');
         task_edit_button.setAttribute('onclick', "task_edit(this.parentElement.parentElement, this)");
         fa_edit = document.createElement('i');
-        fa_edit.setAttribute('class', 'fa fa-pencil');
+        fa_edit.setAttribute('class', 'fa fa-pencil fa-2x');
 
         task_delete_button = document.createElement('button');
         task_delete_button.setAttribute('id', 'task_delete_button');
         task_delete_button.setAttribute('onclick', "task_delete(this.parentElement.parentElement)");
         fa_delete = document.createElement('i');
-        fa_delete.setAttribute('class', 'fa fa-trash');
+        fa_delete.setAttribute('class', 'fa fa-trash fa-2x');
 
 
         unfinished_task_container.append(task_container);
@@ -329,34 +389,37 @@ function add_task(){
 
   function task_done(task, task_tool){
     finished_task_container = document.getElementsByClassName("container")[1];
-    task.removeChild(task_tool);
-    
 
     var key = task.getAttribute("data-key");
+    uniqkey = "-" + Math.floor(1000000000 + Math.random() * 9000000000);
     
-
-   
-    task_delete(task);
-    
-  }
-
-  function task_edit(task, edit_button){
-    edit_button.setAttribute("id", "task_edit_button_editing");
-    edit_button.setAttribute("onclick", "finish_edit(this.parentElement.parentElement, this)");
-
     title = task.childNodes[0].childNodes[0];
-    title.setAttribute("contenteditable", true);
-    title.setAttribute("id", "title_editing");
-    title.focus();
-
     deadline = task.childNodes[0].childNodes[1];
-    deadline.setAttribute("contenteditable", true);
-    deadline.setAttribute("id", "date_editing");
 
-    description = task.childNodes[0].childNodes[2];
-    description.setAttribute("contenteditable", true);
-    description.setAttribute("id", "description_editing");
-    description.focus();
+
+
+      task.removeChild(task_tool);
+      task_delete(task);
+      
+    }
+
+    function task_edit(task, edit_button){
+      edit_button.setAttribute("id", "task_edit_button_editing");
+      edit_button.setAttribute("onclick", "finish_edit(this.parentElement.parentElement, this)");
+
+      title = task.childNodes[0].childNodes[0];
+      title.setAttribute("contenteditable", true);
+      title.setAttribute("id", "title_editing");
+      title.focus();
+
+      deadline = task.childNodes[0].childNodes[1];
+      deadline.setAttribute("contenteditable", true);
+      deadline.setAttribute("id", "date_editing");
+
+      description = task.childNodes[0].childNodes[2];
+      description.setAttribute("contenteditable", true);
+      description.setAttribute("id", "description_editing");
+      description.focus();
 
   }
   function finish_edit(task, edit_button){

@@ -40,8 +40,8 @@ body::-webkit-scrollbar-thumb
 }
 
 img{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 
 h1{
@@ -63,7 +63,7 @@ h3{
 }
 
 #input{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 10px;
     border: 2px solid #FF8370;

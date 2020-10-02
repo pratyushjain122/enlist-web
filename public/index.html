@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Enlist</title>
+    <title>Enlist</title>
+    <link rel="icon" href="./Extra/logo.png" type="image/gif" sizes="270×270">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.21.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.21.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/7.21.1/firebase-performance.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/7.22.0/firebase-app.js"></script>
+
+    <script defer src="/__/firebase/7.22.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.22.0/firebase-performance.js"></script>
+
+    
     <script defer src="/__/firebase/init.js"></script>
-
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body oncontextmenu="return false">
-    
     
     <img id="gif" src="/Extra/logo.gif" alt="Logo">
 
@@ -36,34 +36,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+    
     <script src="firebase.js"></script>
     <script src="signIn.js"></script>
-
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
 
         try {
           let app = firebase.app();
