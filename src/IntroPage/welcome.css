@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+
+.center {
+  display: grid;
+  position: absolute;
+  place-items: center;
+  margin-top: 30px;
+}
+
+#button {
+  font-family: "Montserrat", sans-serif;
+  float: left;
+  background: none;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border: 2px solid #ff8370;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  width: 250px;
+}
+
+#menu {
+  font-family: "Montserrat", sans-serif;
+  float: left;
+  background: none;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border: 2px solid #ff8370;
+  border-radius: 5px;
+  padding: 0px 0;
+  margin: 10px 0;
+  width: 250px;
+}
+
+a,
+a:hover {
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+#button:hover {
+  border: 2px solid #ec5a44;
+  color: white;
+  background: #ff8370;
+  outline: none;
+  cursor: pointer;
+}
+
+#button:focus {
+  border: 2px solid #ff8370;
+  outline: none;
+  background: #ff8370;
+}
+
+li:hover {
+  border: 2px solid #ec5a44;
+  color: white;
+  background: #ff8370;
+  outline: none;
+  cursor: pointer;
+}
+
+li {
+  border: 1px solid #ec5a44;
+  height: 50px;
+  padding-top: 10px;
+}
+
+h1 {
+  color: white;
+  font-size: 500%;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+svg {
+  opacity: 0.25;
+}
+
+.anim,
+.anim svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.anim path {
+  stroke-width: 2;
+}
+
+@media (max-device-width: 1024px) {
+  .center {
+    display: grid;
+    position: absolute;
+    place-items: center;
+    margin-top: 100px;
+  }
+
+  #button {
+    font-family: "Montserrat", sans-serif;
+    float: left;
+    background: none;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 2px solid #ff8370;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 200px;
+  }
+
+  #menu {
+    font-family: "Montserrat", sans-serif;
+    float: left;
+    background: none;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 2px solid #ff8370;
+    border-radius: 5px;
+    padding: 0px 0;
+    margin: 10px 0;
+    width: 200px;
+  }
+
+  a,
+  a:hover {
+    color: white;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  #button:hover {
+    border: 2px solid #ec5a44;
+    color: white;
+    background: #ff8370;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #button:focus {
+    border: 2px solid #ff8370;
+    outline: none;
+    background: #ff8370;
+  }
+
+  li:hover {
+    border: 2px solid #ec5a44;
+    color: white;
+    background: #ff8370;
+    outline: none;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: white;
+    font-size: 300%;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  svg {
+    opacity: 0.25;
+  }
+
+  .anim,
+  .anim svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .anim path {
+    stroke-width: 2;
+  }
+}

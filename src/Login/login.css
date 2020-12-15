@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+#gif{
+    margin-top: 30px;
+    margin-bottom: 75px;
+}
+
+
+#prn{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #FF8370;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+#prn:hover{
+    border: 4px solid #FF8370;
+    outline:none;
+}
+
+
+#prn:focus{
+    border: 4px solid #FF8370;
+    outline: none;
+}
+
+
+#btechEmail{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    background: white;
+    font-size: large;
+    color: rgb(107, 103, 103);
+    text-align: center;
+    border: 2px solid #FF8370;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+#btechEmail:hover{
+    border: 4px solid #FF8370;
+    outline:none;
+    cursor: pointer;
+}
+
+#btechEmail:focus{
+    border: 4px solid #FF8370;
+    outline: none;
+}
+
+
+#back{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    background: white;
+    font-size: large;
+    color: rgb(107, 103, 103);
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: underline;
+}
+
+
+#back:hover{
+    outline:none;
+    cursor: pointer;
+}
+
+#container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-decoration: double;   
+}
+
+
+#privacy{
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    background: white;
+    font-size: small;
+    color: rgb(107, 103, 103);
+    text-align: center;
+    padding: 10px 20px;
+}
+
+p a{
+    text-decoration: underline;
+}

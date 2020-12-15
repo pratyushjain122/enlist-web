@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+*{
+
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+body::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: #FF8370;
+}
+
+.container1{
+    width: 100%;
+    align-items: center;
+    background-color: #905858;
+    color: white;
+    height: 80px;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page_head{ padding-top: 18px; opacity: 1;}
+
+#logo_img{
+    width: 10vh;
+    height: auto;
+}
+
+img{
+    height: auto;
+    width: 13vh;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-larger;
+    padding: 0.5rem;
+    opacity: 75%;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.5rem;
+    padding-top: 0;
+    opacity: 55%;
+}
+
+#heading{
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 0.5rem;
+    opacity: 75%;
+}
+
+h3{
+    font-weight: bold;
+    font-size: x-large;
+    padding: 0.5rem;
+    padding-bottom: 0;
+    opacity: 70%;
+}
+
+#sub-head{
+    padding-bottom: 0;
+    font-size:large;
+    font-weight: bold;
+}
+
+.content{
+    padding: 10px 10px;
+}
+
+p{
+    line-height: 1.75rem;
+    padding-top: 0;
+}
+
+i{
+    color: #FF8370;
+}
+
+li{
+    line-height: 1.75rem;
+}
+
+ul{
+    padding-bottom: 10px;
+}
+
+#arrow{
+    border: none;
+}
+
+.disclaimer{
+    border: 3px solid #FF8370;
+    padding: 5px 20px;
+    margin: 30px;
+}
+
+
+
+/* TERMS & PRIVACY */
+
+*{
+
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#container1{
+    width: 80%;
+    align-items: center;
+}
+
+.date{
+    font-size: large;
+    font-weight: normal;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: auto;
+}
+
+h2{
+    border-bottom: 2px solid #FF8370;
+    padding: 0.5rem;
+    opacity: 75%;
+}
+
+.content{
+    padding: 10px 10px;
+}
+
+p{
+    line-height: 1.75rem;
+}
+
+#box{
+    padding: 5px;
+    border: 2px solid #FF8370;
+    color: #FF8370;
+}
+
+li{
+    line-height: 1.75rem;
+}
+
+#arrow{
+    border: none;
+}
+
+
+
+/* ABOUT US */
+
+*{
+  list-style: none;
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+h3{
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+#cover{
+    padding-top: 0px;
+    height: 50%;
+    width: 100%;
+    margin-top: 0px;
+}
+
+#input{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #FF8370;
+}
+
+.info{
+    margin: 20px;
+}
+
+p{
+    line-height: 1.75rem;
+    margin-bottom: 1.3em;
+}
+
+#decoration{
+    font-weight: 600;
+}
+
+#team{
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+
+article {
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+#name{
+    margin-bottom: 1.3em;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.profile{
+    border-radius: 100%;
+    border: 1px solid #FF8370;
+    margin: auto;
+    margin-bottom: 20px;
+    display: grid;
+}
+
+.profile:hover{
+    border: 3px solid #FF8370;
+}
+
+#git{
+    color: black;
+}
+
+#linkedin{
+    color: black;
+}
+
+#linkedin:hover{
+    color: #0e76a8;
+}
+
+#git:hover{
+    color: gray;
+}
+
+hr{
+    width: 80px;
+    margin: 20px auto;
+}
+
+

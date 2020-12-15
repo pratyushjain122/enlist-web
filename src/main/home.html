@@ -1,0 +1,197 @@
+<html>
+
+  <head>
+    <title> Enlist </title>
+  
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="../Extra/logo.png" type="image/gif" sizes="270×270">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+
+    <script src="../firebase/firebase.js"></script>
+    <script>
+      function getConfirmation() {
+               var retVal = confirm("Do you want to update the list ?\n( Your current progress will be overwritten. )");
+               if( retVal == true ) {
+                  updateAll();
+                  return true;
+               } else {
+                  
+                  return false;
+               }
+            }
+    </script>
+
+    <script src="app.js"></script>
+    
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" integrity="sha512-cViKBZswH231Ui53apFnPzem4pvG8mlCDrSyZskDE9OK2gyUd/L08e1AC0wjJodXYZ1wmXEuNimN1d3MWG7jaQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.min.css" integrity="sha512-YqF4f2cbm2jH7sEEu/iDJFjSQ/qUSzoiQIK2OQ3OFTsQQE5dxoCTYz1wZrTMv8ES8NYqOB5ChZU8jQdMaEv/yg==" crossorigin="anonymous" />
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    
+
+
+  </head>
+
+  <body onload="date_picker(); Pvt(); sideBar()" oncontextmenu=" return false">
+
+  
+  <div class="wrapper">
+    <div class="top_navbar"> 
+      <div class="hamburger">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo"><h3>ENLIST</h3></div>
+        <span id="pop-uppppppppp"></span> 
+        <ul>
+          
+          <li><a title="Settings" href="../settings/settings.html">
+            <i class="fas fa-cog fa-2x" id="user" ></i>
+            </a></li>
+          
+          <li><a title="Log-out">
+            <i class="fas fa-sign-out-alt fa-2x" id="user" onclick="signOut()"></i>
+            </a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="sidebar">
+        <ul>
+          <li><a onclick="Class()" id="class"  class="pointer">
+            <span class="icon"><i class="fas fa-book fa-2x"></i></span>
+            <span class="title" id="ResClass">Class</span></a></li>
+
+          <li><a onclick="Division()" id="B1" class="pointer">
+            <span class="icon"><i class="fas fa-book fa-2x"></i></span>
+            <span class="title" id="division" >Div</span>
+            </a></li>
+
+            <li><a onclick="Pvt()" id="personalTaskList" class="pointer">
+              <span class="icon"><i class="fas fa-user-alt fa-2x"></i></span>
+              <span class="title" id="ivision" >Personal</span>
+              </a></li>
+
+            <li><a href="../Imp/Implist.html"  id="Imp" class="pointer">
+              <span class="icon"><i class="fas fa-star-half-alt fa-2x"></i></span>
+              <span class="title" id="ivision" >Imp 
+                <!-- <ul>
+                  <li class="title" id="ivision">CS-B</li>
+                  <li class="title" id="ivision">CS-B3</li>
+                  <li class="title" id="ivision">Personal</li>
+                </ul> -->
+              </span>
+              </a></li>
+                  
+          
+          <!-- <li><a href="mailto:enlist.feedback@gmail.com?subject=Suggest a feature/ Report a bug.">
+            <span class="icon"><i  class="fas fa-envelope fa-2x"></i></span>
+            <span class="title">Mail</span>
+            </a></li> -->
+
+          <!-- <li><a href="https://github.com/prakhar-agarwall/enlist">
+            <span class="icon"><i  class="fab fa-github fa-2x"></i></span>
+            <span class="title">Git</span>
+            </a></li> -->
+  
+          <!-- <li><a href="../about/about.html">
+            <span class="icon"><i  class="fas fa-users fa-lg"></i></span>
+            <span class="title">About</span>
+            </a></li> -->
+
+          <!-- <li><a href="../privacy/privacy.html">
+            <span class="icon"><i  class="fas fa-file-contract fa-2x"></i></span>
+            <span class="title">Policy</span>
+            </a></li>  -->
+
+          <!-- <li><a href="../tutorial/tutorial.html">
+            <span class="icon"><i  class="fas fa-book-open fa-lg"></i></span>
+            <span class="title">Tutorial</span>
+            </a></li> -->
+
+          <!-- <li><a href="../whats-new/whats-new.html">
+            <span class="icon"><i class="fas fa-rocket fa-2x"></i></span>
+            <span class="title">Releases</span>
+            </a></li> -->
+                       
+
+      </ul>
+    </div>
+
+    
+
+  
+      <div id="content_container">
+        
+        <div id="finish_task_header">
+          <p> ENLIST </p>
+        </div>
+  
+        <div id="task_input_container">
+          <input id="input_box" type="text" onkeypress="allowAlphaNumericSpace(event)" maxlength="21" placeholder="Enter a task"/ autocomplete="off">
+          <input id="input_date" class="from-date" data-provide="datepicker" name="date_from" placeholder="Select Date" onclick="date_picker()" autocomplete="off">
+          <input id="input_description" type="text" onkeypress="allowAlphaNumericSpace(event)" maxlength="35" placeholder="Enter a description"/ autocomplete="off">
+  
+  
+          <div id="hello">
+            <label for="shared" id="shared" class = "per">
+            <input type="radio" class="hello2" name="shared" id="personalList" checked>
+            Personal
+          </label>
+            <label for="shared" id="shared" class = "per">
+            <input type="radio" name="shared" class="hello2" id="sharedList">
+            Shared
+          </label>
+          </div>
+          
+          
+          <button id="input_button" onclick="add_task()">
+            Enter Task <i class="fa fa-arrow-circle-right"></i>
+          </button>
+        </form>
+          
+        </div>
+  
+        <!-- Task To Do -->
+        <p><div class="header">Tasks</div><span id="pop-upppp"></span></p>
+        <div class="container">
+  
+  
+        </div>
+  
+  
+      </div>
+  
+  
+  </div>
+
+
+</body>
+</html>
